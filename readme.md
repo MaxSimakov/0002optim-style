@@ -1,4 +1,11 @@
-1. Отключил lazy плагин. Поставил  loading="lazy"
-
-
-rm -rf node_modules
+1. <https://maxsimakov.github.io/0002optim-style/public>
+2. <https://maxsimakov.github.io/0002optim-style/public/home.html>
+3. <https://maxsimakov.github.io/0002optim-style/public/allCatalog.html>
+4. <https://maxsimakov.github.io/0002optim-style/public/catalogItemPage.html>
+5. <https://maxsimakov.github.io/0002optim-style/public/category.html>
+6. <https://maxsimakov.github.io/0002optim-style/public/contacts.html>
+7. <https://maxsimakov.github.io/0002optim-style/public/contentPage.html>
+8. <https://maxsimakov.github.io/0002optim-style/public/productPage.html>
+9. <https://maxsimakov.github.io/0002optim-style/public/searchPage.html>
+10. <https://maxsimakov.github.io/0002optim-style/public/servicesCatalog.html>
+11. <https://maxsimakov.github.io/0002optim-style/public/404.html>
