@@ -1,5 +1,216 @@
 mixin header()
 	// start header
-	+b.HEADER.header#header&attributes(attributes)
-		block
+	header
+		.capContainer
+			.fullWidthSection.flexWrap
+				.flexWrap.alignLeft
+					a.toggle
+						span
+					.logo
+						a(href='/index.html')
+							img(src='img/optimstyle_logo.svg' alt='Оптима Стиль')
+					#phoneWrapper
+						#phoneWP.contactsContainer.flexWrap.flexLeft
+							i#cancelPhone.icon-cancel
+							.contacts
+								i.icon-svg1
+								a(href='tel:+7(49624)63676') +7 (49624) 6-36-76
+								span Центральный офис и склад
+							.allPhoneNumbers
+								.contacts
+									a(href='tel:+7(49624)63676')
+										| +7 (49644) 2-03-67 
+										i.icon-arrow_down
+									span г. Воскресенск
+								.contactsWrapper
+									.contacts
+										a(href='tel:+7(49624)63676') +7 (49644) 2-03-67
+										span г. Воскресенск
+									.contacts
+										a(href='tel:+7(49624)63676') +7 (49644) 2-03-67
+										span г. Воскресенск
+									.contacts
+										a(href='tel:+7(49624)63676') +7 (49644) 2-03-67
+										span г. Воскресенск
+				.capInfo.flexWrap.alignRight
+					.basketBlk.icons.active(data-tooltip='Корзина')
+						a(href='')
+							i.icon-cart
+							div
+								span 50 товаров
+								span 16 547 ₽
+					.compareBlk.icons(data-tooltip='Сравнение')
+						a(href='')
+							i.icon-compare
+							span 60
+					.likeBlk.icons(data-tooltip='Избранное')
+						a(href='')
+							i.icon-favorit
+							span 290
+					.userBlk.icons.active(data-tooltip='Личный кабинет')
+						a(href='')
+							i.icon-user2
+							span Войти
+					.searchBlk.icons.forMobile
+						button.openSearchForm
+							i.icon-search
+			.searchWrapper
+				form.searchForm(action='')
+					input(type='text' placeholder='Поиск')
+					button.submit Найти
+				button.closeSearchForm
+					i.icon-cancel
+		.fullWidthSection
+			.menuContainer.baseMenu
+				nav#main-nav
+					ul.topmenu
+						li.liContainer.icon-burger
+							a(href='catalog/letnyaya-spetsodezhda/') Каталог
+							i.icon-arrow_right
+							ul.submenu
+								li
+									a.icon-arrow_right(href='') Спецодежда
+									ul.submenu
+										li
+											a(href='/catalog/letnyaya-spetsodezhda/') От общепроизводственных загрязнений
+										li
+											a(href='/catalog/signalnaya-spetsodezhda/') Сигнальная спецодежда
+										li
+											a(href='/catalog/odezhda-dlya-okhrannykh-struktur/')  Одежда для охранных структур 
+										li
+											a(href='/catalog/rubashki-futbolki/')  Рубашки, футболки 
+										li
+											a(href='/catalog/kombinezony-zashchitnye/')  Комбинезоны защитные 
+										li
+											a(href='/catalog/proizvodstvennye-khalaty/')  Производственные халаты 
+										li
+											a(href='/catalog/odezhda-dlya-sfery-obsluzhivaniya/')  Одежда для работников общепита 
+										li
+											a(href='/catalog/zashchita-ot-povyshennykh-temperatur/')  Защита от повышенных температур 
+										li
+											a(href='/catalog/zashchita-ot-vody-i-nasekomykh/')  Защита от воды и насекомых 
+										li
+											a(href='/catalog/zashchita-ot-kislot-i-shchelochey/')  Защита от кислот и щелочей 
+										li
+											a(href='/catalog/fartuki-zashchitnye/')  Фартуки защитные 
+										li
+											a(href='/catalog/vlagostoykaya-odezhda/')  Защита от влаги 
+										li
+											a(href='/catalog/meditsinskaya-odezhda/')  Медицинская одежда 
+										li
+											a(href='/catalog/golovnye-ubory/')  Головные уборы 
+										li
+											a(href='/catalog/uteplennaya-spetsodezhda/')  Утепленная спецодежда 
+								li
+									a.icon-arrow_right(href='') Спецобувь
+									ul.submenu
+										li
+											a(href='/catalog/botinki/') Ботинки
+										li
+											a(href='/catalog/polubotinki/') Сандали, полуботинки, кроссовки
+										li
+											a(href='/catalog/obuv-zhenskaya/') Обувь Женская
+										li
+											a(href='/catalog/sabo-tapki/') Сабо, тапки
+										li
+											a(href='/catalog/sapogi/') Сапоги
+										li
+											a(href='/catalog/polusapogi/') Полусапоги
+										li
+											a(href='/catalog/valenki/') Валенки
+										li
+											a(href='/catalog/rezinovaya-obuv/') Обувь резиновая
+								li
+									a(href='') СИЗ (Защита рук)
+								li
+									a(href='') СИЗ (Защита головы)
+								li
+									a(href='') СИЗ (Защита от падений с высоты)
+								li
+									a(href='') Сопутствующие товары
+								li
+									a.download(href='' download='')
+										i.icon-list
+										|  Скачать прайс-лист
+						li
+							a.icon-arrow_right О компании
+							ul.submenu
+								li
+									a(href='') О нас 
+								li
+									a(href='') Вакансии 
+								li
+									a(href='') Партнерам 
+								li
+									a(href='') Наша команда 
+								li
+									a(href='') Новинки
+								li
+									a(href='') Спецпредложения
+						li
+							a.icon-arrow_right(href='') Услуги
+							ul.submenu
+								li
+									a(href='') Разработка фирменного стиля  
+								li
+									a(href='') Пошив на заказ 
+								li
+									a(href='') Нанесение логотипа
+						li
+							a.icon-arrow_right(href='') Клиентам
+							ul.submenu
+								li
+									a(href='/clients/information/') Информация
+								li
+									a.icon-arrow_right Спецодежда
+									ul.submenu
+										li
+											a(href='/pictograms/spetsodezhda/') Основные ГОСТы
+										li
+											a(href='/clients/spetsodezhda/razmery/') Соответствие размеров
+										li
+											a(href='/clients/spetsodezhda/pravila-uhoda/') Правила ухода за изделиями
+								li
+									a.icon-arrow_right Обувь
+									ul.submenu
+										li
+											a(href='/clients/obuv/gosts/') Основные госты
+										li
+											a(href='/pictograms/spetsobuv/') Расшифровка пиктограмм
+										li
+											a(href='/clients/obuv/parametry/') Основные параметры и размеры
+										li
+											a(href='/clients/obuv/rucovodstvo/') Руководство к выбору спецобуви
+								li
+									a.icon-arrow_right Защита рук
+									ul.submenu
+										li
+											a(href='/clients/zashchita-ruk/rukovodstvo/') Руководство к выбору средств защиты рук
+										li
+											a(href='/clients/zashchita-ruk/harakteristiki/') Физические характеристики перчаток
+										li
+											a(href='/clients/zashchita-ruk/prikaz122/') Приказ Минздравсоцразвития России №122н
+								li
+									a.icon-arrow_right Защита дыхания
+									ul.submenu
+										li
+											a(href='/clients/zashchita-dyhaniya/predely/') Пределы и область применения
+								li
+									a(href='/clients/zashchita-sluha/') Защита слуха
+								li
+									a(href='/clients/dictionary/') Словарь терминов
+								li
+									a(href='/clients/question/') Задать вопрос (форма для письма)
+						li
+							a(href='') Контакты
+					ul.userConvenienceWrap
+						li
+							a.icon-favorit(href='/') Сравнение
+						li
+							a.icon-favorit(href='/') Избранное
+						li
+							a.icon-user2(href='/') Личный кабинет
+				button.openSearchForm.md-none
+					i.icon-search
+
 	// end header

@@ -1,0 +1,101 @@
+    .advantagesWrapper {
+        margin: 50px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+    
+    .advantagesWrapper .advantagesItem {
+        width: 25%;
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        -webkit-transition: all .36s;
+        transition: all .36s;
+    }
+    
+    .advantagesWrapper .advantagesItem:hover {
+        background: #f2f2f2;
+    }
+    
+    .advantagesWrapper .advantagesItem p {
+        padding: 0;
+        margin: 0 0 0 20px;
+    }
+    
+    .advantagesWrapper .advantagesItem i {
+        color: red;
+        font-size: 52px;
+    }
+    
+    .advantagesWrapper {
+        border: 1px solid #f2f2f2;
+        background-color: #ffffff;
+    }
+    
+    .advantagesWrapper .advantagesItem:after {
+        content: "";
+        width: 1px;
+        height: 66px;
+        background: #f2f2f2;
+        position: absolute;
+        right: 0;
+        top: calc(50% - 33px);
+    }
+    
+    .advantagesWrapper .advantagesItem:last-child:after {
+        opacity: 0;
+    }
+    
+    .advantagesWrapper .advantagesItem p {
+        padding: 0;
+        margin: 0 0 0 20px;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 18px;
+    }
+    
+    @media all and (max-width:1300px) {
+        .advantagesWrapper .advantagesItem p {
+            margin-left: 10px;
+        }
+    }
+    
+    @media (max-width:1024px) {
+        .advantagesWrapper .advantagesItem {
+            width: 49%;
+        }
+    }
+    
+    @media (max-width:800px) {
+        .advantagesWrapper .advantagesItem:after {
+            right: 0px;
+        }
+        .advantagesWrapper .advantagesItem {
+            width: 100%;
+            text-align: center;
+        }
+        .advantagesWrapper .advantagesItem p {
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 500 !important;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .advantagesWrapper .advantagesItem {
+            padding: 15px;
+        }
+        .advantagesWrapper .advantagesItem p {
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 500 !important;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .advantagesWrapper .advantagesItem+.advantagesItem {
+            border-top: 1px solid #f2f2f2;
+        }
+    }

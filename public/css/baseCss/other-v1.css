@@ -1,0 +1,276 @@
+/* Пока тут собраны стили, которые не могу пиписать к конкретному блоку */
+
+.caption {
+    color: #0e1014;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 28px;
+    padding: 0 0 30px 0;
+    margin: 0px;
+}
+
+.button2:hover {
+    background: #e02126;
+    color: #fff !important;
+    border-color: #e02126;
+}
+
+.articul {
+    color: #838b93;
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+.itemSlider img {
+    width: 100%;
+}
+
+.breadcrumbs * {
+    font-size: 13px;
+    color: #b6b5b5;
+}
+
+.breadcrumbs__inner .crumb:not(:last-of-type)::after {
+    content: "-";
+}
+
+.breadcrumbs__inner {
+    margin-bottom: 20px;
+}
+
+.crumb {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.breadcrumbs__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.crumb:after {
+    margin: 0 5px;
+}
+
+.blk {
+    color: #fff;
+    background: #000;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 3px 7px;
+}
+
+.blk.hit {
+    background: #7740a2;
+}
+
+.blk.new {
+    background: #00b06c;
+}
+
+.button2 {
+    display: inline-block;
+    color: #e02126;
+    border: 2px solid #e02126;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 9px 19px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: var(--mainButtonHover);
+    border-color: var(--mainButtonHover);
+}
+
+.fancybox-inner * {
+    color: #fff!important;
+}
+
+.fancybox-inner button:disabled {
+    display: none;
+}
+
+.h30 {
+    height: 30px;
+}
+
+.compareIcon:hover,
+.compareIcon.active {
+    color: #000;
+}
+
+.fullWidthSection {
+    max-width: 1330px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+section.fullWidthSection {
+    margin-bottom: 60px;
+}
+
+section.fullWidthSection .breadcrumbs {
+    padding: 30px 0 0 0;
+}
+
+.fullWidthSection h1 {
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 28px;
+}
+
+input {
+    -webkit-appearance: none;
+    appearance: none
+}
+
+form button:hover {
+    background: var(--mainButtonHover);
+    border-color: var(--mainButtonHover);
+}
+
+.more i {
+    vertical-align: middle;
+    margin-left: 5px;
+    font-size: 14px;
+    display: inline-block;
+    line-height: 10px;
+    color: inherit;
+    position: relative;
+    top: -1px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 23px;
+    margin: 20px 0;
+}
+
+p a {
+    color: var(--mainColorHover) !important;
+    text-decoration: underline !important;
+}
+
+p a:hover {
+    text-decoration: none !important;
+}
+
+.leftSidebar {
+    width: 251px;
+}
+
+.leftSidebar+div {
+    width: calc(100% - 280px);
+}
+
+
+/*рекламный банек в левом баре */
+
+.leftSidebar>div+div {
+    margin-top: 30px;
+}
+
+.bannerSidebar {
+    overflow: hidden;
+    display: block;
+}
+
+.bannerSidebar img {
+    display: block;
+    width: 100%;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+}
+
+.bannerSidebar a:hover img {
+    -webkit-transform: scale(1.04);
+    -moz-transform: scale(1.04);
+    -o-transform: scale(1.04);
+}
+
+
+/* конец */
+
+
+/* 404 */
+
+.arrorPage {
+    text-align: center;
+    width: 100%;
+    margin: 100px 0 40px;
+}
+
+.arrorPage h1 {
+    color: var(--mainColorHover);
+    font-size: 175px;
+    font-weight: 600;
+    line-height: 125px;
+    margin: 0 0 50px;
+}
+
+.arrorPage p {
+    margin: 0 auto 40px;
+    font-size: 18px;
+}
+
+
+/* конец */
+
+.resultPage .resultTitle {
+    margin-right: 20px;
+}
+
+.resultPage p {
+    margin: 30px 0;
+}
+
+.slick-list {
+    padding: 0 1px !important;
+}
+
+@media (max-width:1024px) {
+    .leftSidebar {
+        display: none;
+    }
+    .leftSidebar+div {
+        width: 100%;
+    }
+    header+.homeMenuSlider {
+        margin-top: 0;
+    }
+}
+
+@media (max-width:800px) {
+    .leftSidebar+div {
+        width: 100%;
+    }
+}
+
+@media (max-width:730px) {
+    .caption {
+        font-size: 20px;
+        padding: 0 0 18px 0;
+    }
+}
+
+@media (max-width:500px) {
+    .arrorPage h1 {
+        font-size: 100px;
+        line-height: 80px;
+        margin-bottom: 40px;
+    }
+    .arrorPage {
+        margin: 50px 0 0;
+    }
+}

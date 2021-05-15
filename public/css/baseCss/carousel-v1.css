@@ -1,0 +1,54 @@
+.sliderBg {
+    position: relative;
+}
+
+.navButtons {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navButtons .prev {
+    margin-left: -20px;
+}
+
+.navButtons .next {
+    margin-right: -20px;
+}
+
+.navButtons div:hover {
+    background: var(--mainColorHover);
+    color: #fff;
+    border-color: var(--mainColorHover);
+}
+
+.itemSlider {
+    position: relative;
+}
+
+.navButtons>div {
+    width: 41px;
+    height: 41px;
+    border-radius: 20px;
+    border: 1px solid #e8e8e8;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: initial !important;
+}
+
+.sliderProductItem .slick-track {
+    padding: 30px 0 50px;
+}
+
+.caption+.sliderBg {
+    margin-top: -25px;
+}
+
+.slick-slide .productItem {
+    width: 100%;
+}

@@ -19,5 +19,38 @@ mixin arrow()
 
 mixin ie11()
 	//- modernizer and for ie11
-	 
+	
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+
+mixin productItem(n, h, img, art, text, old, act)
+	.productItem.center
+		.topInfoItemLeft
+			if n
+				.blk.new Новинка
+			if h
+				.blk.hit Хит
+		.topInfoItemRight
+			.favorites
+				button
+					i.icon-favorit
+			.compare
+				button
+					i.icon-compare.compareIcon
+		a.img-wrap(href='')
+			img(src=`img/${img}` alt='')
+		.articul!= art
+		a.namePriductLink(href='')!= text
+		.priceWrap
+			if old
+				.oldPrice!= old
+			.activePrice!= act
+		a.button2(href='') Подробнее
+
+mixin rating
+	.rating
+		i.fa.fa-star.active(aria-hidden='true')
+		i.fa.fa-star.active(aria-hidden='true')
+		i.fa.fa-star.active(aria-hidden='true')
+		i.fa.fa-star.active(aria-hidden='true')
+		i.fa.fa-star(aria-hidden='true')
+		block

@@ -1,0 +1,186 @@
+mixin catalogItemPageContent(data)
+	// start catalogItemPageContent
+	.baseContentWrapper
+		.filtersWrapBg
+			.openFilters
+				i.fa.fa-sliders(aria-hidden='true')
+				| Фильтры
+			.filterWrapper
+				.fltWrap
+					.fltWrpaTitle Цена
+					.fltWrapInside
+						.wrapper.priceInput
+							input(type='text' placeholder='От')
+							input(type='text' placeholder='До')
+							.slidPriceWrapper
+								span.redLine
+								span.greyLine
+				.fltWrap
+					.fltWrpaTitle
+						span Пол
+					.fltWrapInside
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Женский
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Мужской
+				.fltWrap
+					.fltWrpaTitle.selected
+						span
+							| Состав ткани 
+							span (3)
+					.fltWrapInside
+						.checkboxWrapper
+							input(type='checkbox' name='' checked='')
+							label(for='') Состав ткани 1
+						.checkboxWrapper
+							input(type='checkbox' name='' checked='')
+							label(for='') Состав ткани 2
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Состав ткани 3
+						.checkboxWrapper
+							input(type='checkbox' name='' checked='')
+							label(for='') Состав ткани 4
+				.fltWrap
+					.fltWrpaTitle
+						span
+							| Серия 
+							span
+					.fltWrapInside
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Серия 1
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Серия 2
+				.fltWrap
+					.fltWrpaTitle Тип
+					.fltWrapInside
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Тип 1
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Тип 2
+				.fltWrap
+					.fltWrpaTitle Защитные свойства
+					.fltWrapInside
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Защитные свойства 1
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Защитные свойства 2
+				.fltWrap
+					.fltWrpaTitle Цвет
+					.fltWrapInside
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Цвет 1
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Цвет 2
+				.fltWrap
+					.fltWrpaTitle Производители
+					.fltWrapInside
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Производители 1
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Производители 2
+				.fltWrap
+					.fltWrpaTitle Название ткани
+					.fltWrapInside
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Название ткани 1
+						.checkboxWrapper
+							input(type='checkbox' name='')
+							label(for='') Название ткани 2
+				.selectedWrap
+					.selectedParameter
+						| Состав ткани 1 
+						i.icon-cancel-1
+					.selectedParameter
+						| Состав ткани 2 
+						i.icon-cancel-1
+					.selectedParameter
+						| Состав ткани 4 
+						i.icon-cancel-1
+				button.button2 Показать 6 предложений
+				button.refresh
+					i.fa.fa-refresh(aria-hidden='true')
+					|  Сбросить фильтр
+		.flexWrapper
+			.sortWrap
+				.fltWrap
+					.fltWrpaTitle
+						span
+							| Сортировка 
+							span
+					.fltWrapInside
+						.checkboxWrapper
+							input(type='radio' name='sortParam')
+							label(for='') По возратсанию цены
+						.checkboxWrapper
+							input(type='radio' name='sortParam')
+							label(for='') По убыванию цены
+			.listWrap
+				button.tile.active
+					+icon(`tile`)
+				button.list
+					+icon(`list`)
+		.catalogItemWrapper
+			+productItem(`n`, `h`, `product-2.png`, `Артикул: А161.1/15`, `Костюм мужской для защиты от ОПЗ (У101)`, `9 990 ₽`, `10 000 ₽`)
+			+productItem(`n`, ``, `product.png`, `Артикул: 68089046`, `Костюм рабочий с наколенниками и налакотниками мужской`, ``, `1115 ₽`)
+			+productItem(`n`, ``, `product-3.png`, `Артикул: S40678`, `Футболка трикотажная (белый)`, ``, `903 ₽`)
+			+productItem(``, `h`, `product-5.png`, `Артикул: M78`, `Защитный крем для рук АРМАКОН ПРОТЕКТ, туба 100 мл`, ``, `6571 ₽`)
+
+			+productItem(`n`, `h`, `product-6.png`, `Артикул: А110`, `Халат женский производственный`, ``, `4 600 ₽`)
+			+productItem(`n`, ``, `product-7.png`, `Артикул: А107`, `Халат х/б мужской`, ``, `890 ₽`)
+			+productItem(`n`, ``, `product-8.png`, `Артикул: А161.1/15`, `Халат х/б мужской`, `990 ₽`, `10 100 ₽`)
+			+productItem(``, `h`, `product-9.png`, `Артикул: А104`, `Халат х/б женский`, ``, `820 ₽`)
+
+			+productItem(`n`, `h`, `product-2.png`, `Артикул: А161.1/15`, `Костюм мужской для защиты от ОПЗ (У101)`, `9 990 ₽`, `10 000 ₽`)
+			+productItem(`n`, ``, `product.png`, `Артикул: 68089046`, `Костюм рабочий с наколенниками и налакотниками мужской`, ``, `1115 ₽`)
+			+productItem(`n`, ``, `product-3.png`, `Артикул: S40678`, `Футболка трикотажная (белый)`, ``, `903 ₽`)
+			+productItem(``, `h`, `product-5.png`, `Артикул: M78`, `Защитный крем для рук АРМАКОН ПРОТЕКТ, туба 100 мл`, ``, `6571 ₽`)
+
+		.pagination
+			ul
+				li
+					a(href='')
+						i.fa.fa-angle-left(aria-hidden='true')
+				li
+					a(href='') 1
+				li
+					a(href='') 2
+				li
+					a(href='') 3
+				li
+					span 4
+				li
+					a(href='') 5
+				li
+					a(href='') 6
+				li
+					a(href='')
+						i.fa.fa-angle-right(aria-hidden='true')
+		.textContent
+			p
+				| С момента своего основания в 1993 году ООО торгово-промышленная компания «Оптим-капитал» работает в области
+				| охраны и безопасности труда и специализируется на комплексном обеспечении предприятий спецодеждой,
+				| спецобувью и
+				| средствами индивидуальной защиты.
+			p
+				| Специфика деятельности компании заключается в том, что мы квалифицированно подбираем СИЗ с учетом условий
+				| труда на каждом рабочем месте. Накопленный многолетний опыт и знания в области охраны труда позволяют
+				| профессионально
+				| решать эти вопросы. На сегодняшний день компания предлагает более 800 наименований средств индивидуальной
+				| защиты. 
+				a(href='#') Постоянное участие
+				|  специалистов ООО ТПК «Оптим-капитал» в выставках, конференциях, посвященных вопросам охраны и безопасности труда, тесное сотрудничество с мировыми лидерами производства СИЗ, позволяет нам быть в курсе новых тенденций на рынке профессиональных средств защиты и предлагать лучшие современные разработки	своим партнерам.
+	// end catalogItemPageContent

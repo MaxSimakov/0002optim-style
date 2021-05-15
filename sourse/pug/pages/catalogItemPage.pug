@@ -1,0 +1,68 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/headerSlider/_headerSlider.pug
+//- include ../blocks/advantages/_advantages.pug
+//- include ../blocks/CatalogCategory/_CatalogCategory.pug
+//- include ../blocks/sliderProductItem/_sliderProductItem.pug
+//- include ../blocks/aboutCompany/_aboutCompany.pug
+//- include ../blocks/sServices/_sServices.pug
+include ../blocks/leftMenu/_leftMenu.pug
+include ../blocks/verticalFilter/_verticalFilter.pug
+include ../blocks/catalogItemPageContent/_catalogItemPageContent.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+	-
+		let items= {
+			'allCatalog':'Каталог',
+			'category':'Спецодежда',
+			};
+		let current= title;
+
+
+block title
+	- let  title= 'Комбинезоны защитные'
+	title= title
+block pagecontent
+	+header()
+	section.fullWidthSection
+		+breadcrumbsDef(items, current)
+		h1 Комбинезоны защитные
+		.flexWrap.alignUp
+			.leftSidebar
+				+leftMenu()
+				+verticalFilter()
+				.bannerSidebar
+					a(href='/')
+						img(src='img/bannerSidebar.png' alt='')
+			+catalogItemPageContent()
+	+footer()
+block foot
+	// JS
+	script.
+		$(document).ready(function () {
+		$(".fltWrpaTitle").click(function () {
+		$(this).toggleClass("active");
+		return false;
+		});
+		});
+		$(document).click(function (e) {
+		if ($(e.target).closest('.fltWrapInside').length) {
+		return;
+		}
+		$(".fltWrpaTitle").removeClass('active');
+		});
+		$(document).ready(function () {
+		$(".openFilters").click(function () {
+		$('.filterWrapper').toggleClass("active");
+		return false;
+		});
+		});
+
+
+
+

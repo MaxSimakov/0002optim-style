@@ -1,0 +1,28 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/headerSlider/_headerSlider.pug
+//- include ../blocks/advantages/_advantages.pug
+//- include ../blocks/CatalogCategory/_CatalogCategory.pug
+//- include ../blocks/sliderProductItem/_sliderProductItem.pug
+//- include ../blocks/aboutCompany/_aboutCompany.pug
+//- include ../blocks/sServices/_sServices.pug
+//- include ../blocks/leftMenu/_leftMenu.pug
+//- include ../blocks/productPageContent/_productPageContent.pug
+include ../blocks/searchPageContent/_searchPageContent.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Поиск'
+	title= title
+block pagecontent
+	+header()
+	+searchPageContent()
+	+footer()
+block foot
+	// JS

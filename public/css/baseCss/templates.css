@@ -1,0 +1,240 @@
+/* В этом файле планируется выводить
+ подключение всех файлов css разбитых на кусочки, плюс самые базовые стили, разметка, цвета, размеры, шрифты */
+
+
+/* шрифты или бутстрап */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+/* шапка */
+
+@import url("header-v1.css");
+
+/* меню */
+
+@import url("menu-v1.css");
+
+/* сдайдер в шапке */
+
+@import url("search-v1.css");
+
+/* поиск в шапке */
+
+@import url("capSlider-v1.css");
+
+/* каталог категорий */
+
+@import url("category-v1.css");
+
+/* блок товара в каталоге*/
+
+@import url("products-v1.css");
+
+/* блок услуг */
+
+@import url("services-v1.css");
+
+/* подвал  */
+
+@import url("footer-v1.css");
+
+/* блок товара в каталоге */
+
+@import url("other-v1.css");
+
+/* карточка товара*/
+
+@import url("productPage-v1.css");
+
+/* карусель*/
+
+@import url("carousel-v1.css");
+
+/* блок товара в каталоге*/
+
+@import url("itemCatalog-v1.css");
+
+/* svg иконки версия optima*/
+
+@import url("../../fonts/fontello/css/fontello.css");
+
+/* визуальные стили иконок */
+
+@import url("icons.css");
+
+/* Услуги 3 блока*/
+
+@import url("services-v1.css");
+
+/* Приемущества  4 шт*/
+
+@import url("advantages-v1.css");
+
+/* Текст о компании небольшой и картинка */
+
+@import url("abouCompany-v1.css");
+
+/* Страница контакты */
+
+@import url("contacts-v1.css");
+
+/* Модальное окно */
+
+@import url("forms.css");
+
+/* Фильтры */
+
+@import url("filters-v1.css");
+
+/* Стили для контентной страницы */
+
+@import url("base-content.css");
+ol,
+ul {
+    padding-left: 0;
+}
+
+:root {
+    --mainFont: "Montserrat", sans-serif;
+    --mainSize: 14px;
+    --lightGrey: #838b93;
+    --mainColorHover: #e02126;
+    --mailColor: #081727;
+    --mainButtonHover: #bd0e13;
+}
+
+body {
+    font-family: var(--mainFont);
+    color: var(--mailColor);
+    font-size: var(--mainSize);
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    box-sizing: border-box;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--maincolor);
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: var(--mainColorHover) !important;
+}
+
+body {
+    background: #fff !important;
+}
+
+.flexWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flexWrap.contentRight,
+.flexWrap.contentEnd {
+    justify-content: flex-end;
+}
+
+.flexWrap.contentLeft,
+.flexWrap.contentStart {
+    justify-content: flex-start;
+}
+
+.flexWrap.contentCenter {
+    justify-content: center;
+}
+
+.flexWrap.contentAround {
+    justify-content: space-around;
+}
+
+.flexWrap.alignUp {
+    align-items: flex-start;
+}
+
+.flexWrap.alignDown {
+    align-items: flex-end;
+}
+
+.container {
+    max-width: 1330px;
+    padding: 0 20px;
+    width: 97%;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+button {
+    background: initial;
+    border: initial;
+    outline: 0px !important;
+}
+
+a,
+button {
+    -webkit-transition: all .36s;
+    transition: all .36s;
+}
+
+nobr {
+    color: inherit !important;
+    font-size: inherit !important;
+}
+
+.button,
+form button {
+    border-radius: 4px;
+    background-color: #e02126;
+    padding: 14px 20px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff !important;
+}
+
+.button:hover,
+form button:hover {
+    background-color: var(--mainButtonHover);
+    color: #fff !important;
+}
+
+@media(max-width:1024px) {
+    .fullWidthSection {
+        max-width: 880px;
+    }
+}
+
+@media (max-width: 800px) {
+    .fullWidthSection {
+        max-width: 600px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .button,
+    form button {
+        font-size: 14px;
+        padding: 11px 18px;
+    }
+}

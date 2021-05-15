@@ -1,0 +1,465 @@
+.sortWrap {
+    margin-bottom: 20px;
+    max-width: 220px;
+}
+
+.sortWrap .fltWrpaTitle {
+    color: #081727;
+    width: 100%;
+}
+
+.sortWrap .fltWrap {
+    margin-right: 0;
+}
+
+.selectedParameter {
+    background-color: #fde59e;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #ad8614;
+    display: flex;
+    align-items: center;
+    margin: 0 6px 7px 0;
+}
+
+.selectedParameter i {
+    font-size: 12px;
+    color: #ad8614;
+    margin-left: 5px;
+}
+
+.selectedParameter:hover i {
+    color: var(--mainColorHover);
+}
+
+.selectedWrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.filterWrapper {
+    padding: 20px;
+    border: 1px solid #f2f2f2;
+    background-color: #f8f8f9;
+    margin-bottom: 20px;
+}
+
+.filterWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.fltWrapInside {
+    display: none;
+}
+
+.fltWrpaTitle.active+.fltWrapInside {
+    display: block;
+}
+
+.fltWrpaTitle {
+    padding: 11px 30px 11px 12px;
+    position: relative;
+    border: 1px solid #f2f2f2;
+    background-color: #ffffff;
+    cursor: pointer;
+    color: #686868;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.fltWrpaTitle:hover {
+    background: rgb(253 253 254);
+}
+
+.fltWrap {
+    position: relative;
+    margin: 0 10px 10px 0;
+}
+
+.fltWrapInside {
+    position: absolute;
+    top: 40px;
+    background: #fff;
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #f2f2f2;
+    border-top: 0px;
+    z-index: 10;
+    width: 220px;
+}
+
+.checkboxWrapper input:checked {
+    background: #e8e8f7;
+}
+
+.checkboxWrapper label {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.checkboxWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.checkboxWrapper input {
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #c7c7c7;
+    background-color: #ffffff;
+}
+
+.checkboxWrapper input {
+    position: relative;
+}
+
+.checkboxWrapper input:checked {
+    background: red url(../../img/check.png) center;
+    border-color: red;
+}
+
+.checkboxWrapper+.checkboxWrapper {
+    margin-top: 10px;
+}
+
+.checkboxWrapper label {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.fltWrpaTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fltWrpaTitle:after {
+    font-family: "icon";
+    content: '\e808';
+    font-size: 6px;
+    position: absolute;
+    right: 10px;
+}
+
+.fltWrpaTitle.selected {
+    background: #e02126;
+    color: #fff;
+}
+
+.fltWrpaTitle.active:after {
+    content: "\e80d";
+    font-size: 9px;
+}
+
+.refresh i {
+    color: #686868;
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+.refresh {
+    cursor: pointer;
+    color: #686868;
+    font-size: 13px;
+    margin-left: 30px;
+    align-self: center;
+}
+
+.selectedWrap {
+    margin-bottom: 30px;
+}
+
+.filtersWrapBg {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filtersWrapBg>div {
+    width: 100%;
+}
+
+.openFilters {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    background: #f8f8f9;
+    border: 1px solid #f2f2f2;
+    font-size: 14px;
+}
+
+.openFilters i {
+    transform: rotate(-90deg);
+    margin-right: 5px;
+}
+
+.openFilters {
+    order: 1;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.fltWrapInside .priceInput input {
+    padding: 7px 10px;
+    width: 47%;
+    height: 40px;
+    border: 1px solid #f2f2f2;
+    background-color: #ffffff;
+}
+
+.fltWrapInside .wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.filtreTitle {
+    border: 1px solid #f2f2f2;
+    background-color: #f8f8f9;
+    padding: 20px 18px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.verticalFilter .filterWrapper {
+    padding: initial;
+    background: #fff;
+}
+
+.verticalFilter .fltWrap {
+    width: 100%;
+    margin: 0;
+}
+
+.verticalFilter .fltWrapInside {
+    position: initial;
+    top: initial;
+    border: none;
+    width: 100%;
+    padding: 0 20px 20px 20px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.verticalFilter .fltWrpaTitle:after {
+    right: 20px;
+}
+
+.verticalFilter .fltWrpaTitle {
+    padding: 22px 20px;
+}
+
+.verticalFilter .fltWrpaTitle {
+    border-right: none;
+    border-left: 0px;
+    border-top: 0;
+}
+
+.verticalFilter .fltWrpaTitle.active {
+    border-bottom: 0;
+    background: #fff !important;
+}
+
+.verticalFilter .fltWrpaTitle.selected {
+    background: initial;
+    color: #686868;
+}
+
+.verticalFilter .selectedWrap {
+    display: none;
+}
+
+.verticalFilter .buttonsFilter {
+    width: 100%;
+    padding: 23px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.verticalFilter .refresh:hover {
+    color: #424141;
+}
+
+.verticalFilter .refresh {
+    padding: 14px 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.slidPriceWrapper {
+    width: 100%;
+    margin: 20px 0 0;
+}
+
+.slidPriceWrapper {
+    position: relative;
+}
+
+span.greyLine {
+    height: 3px;
+    background-color: #f2f2f2;
+    width: 100%;
+    display: block;
+}
+
+span.redLine {
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    height: 3px;
+    background-color: #e02126;
+}
+
+.slidPriceWrapper {
+    width: 100%;
+    margin: 25px 0 0;
+}
+
+.slidPriceWrapper {
+    position: relative;
+}
+
+span.greyLine {
+    height: 3px;
+    background-color: #f2f2f2;
+    width: 100%;
+    display: block;
+}
+
+span.redLine {
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    height: 3px;
+    background-color: #e02126;
+}
+
+span.redLine:before {
+    left: 0px;
+}
+
+span.redLine:after {
+    right: 0px;
+}
+
+span.redLine:before,
+span.redLine:after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 2px solid #e02126;
+    background-color: #ffffff;
+    display: block;
+    border-radius: 50%;
+    top: -6px;
+    position: absolute;
+}
+
+.slidPriceWrapper {
+    margin-bottom: 15px;
+}
+
+.verticalFilter .button {
+    padding: 11px 20px;
+    max-height: 40px;
+}
+
+@media (max-width:1024px) {}
+
+@media (max-width:800px) {
+    .openFilters {
+        display: initial;
+    }
+    .filterWrapper {
+        height: 0px;
+        overflow: hidden;
+        visibility: hidden;
+        padding: 0;
+        margin: 0;
+    }
+    .filterWrapper.active {
+        height: auto;
+        padding: 10px;
+        visibility: visible;
+    }
+}
+
+@media (max-width:500px) {
+    .refresh {
+        margin: 20px 0 0 0;
+        width: 100%;
+        text-align: center;
+    }
+    .fltWrap,
+    .sortWrap,
+    .fltWrapInside {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* Стилизация bitrix фильтров  */
+
+.filrersWrapperBlk {
+    margin: 30px 0;
+}
+
+.filrersWrapperBlk .smart-filter-title {
+    border: 1px solid #f2f2f2;
+    background-color: #f8f8f9;
+    padding: 19px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.filrersWrapperBlk .smart-filter-parameters-box {
+    border: 1px solid #f2f2f2;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 0 0 -2px 0 !important;
+}
+
+.filrersWrapperBlk .row {
+    margin: 0;
+}
+
+.filrersWrapperBlk span.smart-filter-parameters-box-title-text {
+    font-size: 14px;
+    color: var(--mainColor);
+    font-weight: 500;
+}
+
+.filrersWrapperBlk .smart-filter-parameters-box.bx-active .smart-filter-parameters-box-title {
+    padding-bottom: 20px;
+}
+
+.filrersWrapperBlk .smart-filter-parameters-box .smart-filter-parameters-box-title {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0;
+}
+
+.filrersWrapperBlk .smart-filter-button-box {
+    border: 1px solid #f2f2f2;
+    margin: 0 0 0 0;
+    padding: 20px;
+}
+
+
+/* Стилизация bitrix фильтров  */

@@ -1,0 +1,23 @@
+mixin sError(data)
+	// start sError
+	section.fullWidthSection
+		.flexWrap
+			.arrorPage
+				h1 404
+				p
+					| Ошибка 404 
+					br
+					|  Страница не найдена
+				a.button(href='home.html') Перейти на главную
+	#callback.back
+		.modalFormWrapper
+			i.icon-cancel(data-fancybox-close='')
+			h3 Обратный звонок
+			form(action='')
+				input(type='text' placeholder='Ваше Имя *' required='')
+				input(type='tel' placeholder='Телефон *' required='')
+				button(type='submit') Отправить заявку
+				p.warning
+					| Отправляя заявку на обратный звонок вы соглашаетесь с 
+					a(href='') политикой конфиденциальности
+	// end sError

@@ -1,9 +1,132 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+	section.fullWidthSection
+		.breadcrumbs
+			.breadcrumbs__inner
+				.crumb
+					div
+						a(href='/index.html') Главная 
+				.crumb
+					span Контакты
+		.flexWrap
+			h1 Контакты
+			.contactsPage
+				.tabsInfo
+					#tabs
+						ul.tabs-nav
+							li
+								a(href='#tab-1') Высоковск
+							li
+								a(href='#tab-2') Воскресенск
+							li
+								a(href='#tab-3') Ярославль
+							li
+								a(href='#tab-4') Клин
+						.tabs-items
+							#tab-1.tabs-item
+								.contactsWrapper
+									.contactsInfo
+										h3 Центральный офис и склад
+										p
+											span Адрес
+											|  141650, Московская обл. Клинский район г.Высоковск, ул.Ленина, д. 29 а.
+										p
+											span Тел./факс:
+											|  (49624) 6-36-77, 6-36-76
+										p
+											span Е-mail:
+											a.link(href='mailto:sale@optim-capital.ru') sale@optim-capital.ru
+										p
+											span Тел./факс:
+											|  Пн—Пт: с 8.00 до 17.00 
+											br
+											|  (без перерыва на обед)
+										a.modalbox.button2(href='#callback' rel='nofollow') Обратная связь
+									.map
+										div(style='position:relative;overflow:hidden;')
+											a(href='https://yandex.ru/maps/21648/vysokovsk/?utm_medium=mapframe&utm_source=maps' style='color:#eee;font-size:12px;position:absolute;top:0px;') Высоковск
+											a(href='https://yandex.ru/maps/21648/vysokovsk/house/ulitsa_lenina_29a/Z08YcwNkTk0BQFtsfX9zdXViYQ==/?from=tabbar&ll=36.544787%2C56.324915&source=serp_navig&utm_medium=mapframe&utm_source=maps&z=16' style='color:#eee;font-size:12px;position:absolute;top:14px;') Улица Ленина, 29А на карте Высоковска — Яндекс.Карты
+											iframe(src='https://yandex.ru/map-widget/v1/-/CCUUJFccTB' width='560' height='400' frameborder='1' allowfullscreen='true' style='position:relative;')
+							#tab-2.tabs-item
+								.contactsWrapper
+									.contactsInfo
+										h3 Центральный офис и склад
+										p
+											span Адрес
+											|  140200, г. Воскресенск, ул. Советская, д.4а.
+										p
+											span Тел./факс:
+											|  (49644) 2-03-67, 111-44, 1-18-09
+										p
+											span Е-mail:
+											a.link(href='mailto:optim-kapital@yandex.ru') optim-kapital@yandex.ru
+										p
+											span Тел./факс:
+											|  Пн—Пт: с 8.00 до 17.00 
+											br
+											|  (без перерыва на обед)
+										a.modalbox.button2(href='#callback' rel='nofollow') Обратная связь
+									.map
+										div(style='position:relative;overflow:hidden;')
+											a(href='https://yandex.ru/maps/10722/voskresensk/?utm_medium=mapframe&utm_source=maps' style='color:#eee;font-size:12px;position:absolute;top:0px;') Воскресенск
+											a(href='https://yandex.ru/maps/10722/voskresensk/house/sovetskaya_ulitsa_4a/Z0EYcA9jTEEHQFtvfX9weHlnYg==/?from=tabbar&ll=38.683541%2C55.319546&source=serp_navig&utm_medium=mapframe&utm_source=maps&z=16.55' style='color:#eee;font-size:12px;position:absolute;top:14px;') Советская улица, 4А — Яндекс.Карты
+											iframe(src='https://yandex.ru/map-widget/v1/-/CCUUJNWrxA' width='560' height='400' frameborder='1' allowfullscreen='true' style='position:relative;')
+							#tab-3.tabs-item
+								.contactsWrapper
+									.contactsInfo
+										h3 Центральный офис и склад
+										p
+											span Адрес
+											|  150001 г.Ярославль, ул. М. Пролетарская, д.18а, оф.320
+										p
+											span Тел./факс:
+											|  (4852) 58-54-42, 58-54-35
+										p
+											span Е-mail:
+											a.link(href='mailto:yaroslavl@optim-capital.ru') yaroslavl@optim-capital.ru
+										p
+											span Тел./факс:
+											|  Пн—Пт: с 8.30 до 17.00
+										a.modalbox.button2(href='#callback' rel='nofollow') Обратная связь
+									.map
+										div(style='position:relative;overflow:hidden;')
+											a(href='https://yandex.ru/maps/16/yaroslavl/?utm_medium=mapframe&utm_source=maps' style='color:#eee;font-size:12px;position:absolute;top:0px;') Ярославль
+											a(href='https://yandex.ru/maps/16/yaroslavl/house/malaya_proletarskaya_ulitsa_18a/Z0AYfgBkQUwCQFttfXpwc3xhYg==/?from=tabbar&ll=39.874895%2C57.612026&source=serp_navig&utm_medium=mapframe&utm_source=maps&z=16.55' style='color:#eee;font-size:12px;position:absolute;top:14px;') Малая Пролетарская улица, 18А — Яндекс.Карты
+											iframe(src='https://yandex.ru/map-widget/v1/-/CCUUJNCPGC' width='560' height='400' frameborder='1' allowfullscreen='true' style='position:relative;')
+							#tab-4.tabs-item
+								.contactsWrapper
+									.contactsInfo
+										h3 Розничный магазин
+										p
+											span Адрес
+											|  141650, Московская обл. Клинский район г.Высоковск, ул.Ленина, д. 29 а.
+										p
+											span Тел./факс:
+											|  (49624) 6-36-77, 6-36-76
+										p
+											span Е-mail:
+											a.link(href='mailto:sale@optim-capital.ru') sale@optim-capital.ru
+										p
+											span Тел./факс:
+											|  Пн—Пт: с 8.00 до 17.00 
+											br
+											|  (без перерыва на обед)
+										a.modalbox.button2(href='#callback' rel='nofollow') Обратная связь
+									.map
+										div(style='position:relative;overflow:hidden;')
+											a(href='https://yandex.ru/maps/21648/vysokovsk/?utm_medium=mapframe&utm_source=maps' style='color:#eee;font-size:12px;position:absolute;top:0px;') Высоковск
+											a(href='https://yandex.ru/maps/21648/vysokovsk/house/ulitsa_lenina_29a/Z08YcwNkTk0BQFtsfX9zdXViYQ==/?from=tabbar&ll=36.544787%2C56.324915&source=serp_navig&utm_medium=mapframe&utm_source=maps&z=16' style='color:#eee;font-size:12px;position:absolute;top:14px;') Улица Ленина, 29А на карте Высоковска — Яндекс.Карты
+											iframe(src='https://yandex.ru/map-widget/v1/-/CCUUJFccTB' width='560' height='400' frameborder='1' allowfullscreen='true' style='position:relative;')
+	#callback.back
+		.modalFormWrapper
+			i.icon-cancel(data-fancybox-close='')
+			h3 Обратный звонок
+			form(action='')
+				input(type='text' placeholder='Ваше Имя *' required='')
+				input(type='tel' placeholder='Телефон *' required='')
+				button(type='submit') Отправить заявку
+				p.warning
+					| Отправляя заявку на обратный звонок вы соглашаетесь с 
+					a(href='') политикой конфиденциальности
+
 	// end sContact

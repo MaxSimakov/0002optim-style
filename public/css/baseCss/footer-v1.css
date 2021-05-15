@@ -1,0 +1,166 @@
+.footerWrapper {
+    background-color: #181818;
+    padding-top: 50px;
+}
+
+.footerWrapper * {
+    color: #fff;
+    color: #9b9b9b;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.footerWrapper li {
+    list-style: none;
+}
+
+.footerWrapper .footerItemCaption {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 15px;
+}
+
+footer.footerWrapper li+li {
+    margin-top: 15px;
+    color: #fff !important;
+}
+
+.footerWrapper a:hover,
+.footerWrapper li.active a {
+    text-decoration: underline !important;
+    color: #fff !important;
+}
+
+.footerItem p a {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.footerItem>* {
+    width: 100%;
+}
+
+.footerItem:last-child {
+    max-width: 425px;
+    width: 33%;
+}
+
+.footerItem ul li a {
+    max-width: 180px;
+    display: inline-block;
+}
+
+.footerItem {
+    padding-bottom: 30px;
+}
+
+.footerItem {
+    padding-bottom: 30px;
+}
+
+.netLinks {
+    padding-bottom: 30px;
+}
+
+.netLinks a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #9b9b9b;
+    margin-right: 5px;
+}
+
+.netLinks {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.netLinks i.icon-youtube {
+    font-size: 22px;
+    position: relative;
+    top: 4px;
+}
+
+.netLinks i.icon-odnoklassniki {
+    font-size: 17px;
+}
+
+.netLinks i.icon-twitter {
+    font-size: 17px;
+    position: relative;
+    top: 2px;
+}
+
+.netLinks a:hover i {
+    color: #fff;
+}
+
+.netLinks a:hover {
+    background-color: #9b9b9b;
+}
+
+.footerWrapper .netLinks {
+    margin-top: -86px;
+}
+
+.footerBottomInfo {
+    padding: 40px 0;
+    border-top: 1px solid #2f2e2e;
+}
+
+.footerBottomInfo a {
+    text-decoration: underline !important;
+}
+
+@media (max-width: 1330px) {
+    .footerItem:last-child {
+        max-width: 330px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footerItem:last-child {
+        width: 100%;
+        margin-top: 50px;
+        max-width: initial;
+    }
+    .footerWrapper .netLinks {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .footerItem {
+        width: 49%;
+    }
+    .footerBottomInfo div+div {
+        margin-top: 20px;
+    }
+    .footerBottomInfo div {
+        width: 100%;
+    }
+    .footerItem ul li a {
+        max-width: initial;
+    }
+}
+
+@media (max-width: 500px) {
+    .footerItem:nth-child(1),
+    .footerItem:nth-child(2) {
+        width: 100%;
+    }
+    .footerItem:nth-child(3),
+    .footerItem:nth-child(4) {
+        width: initial;
+    }
+    .footerWrapper * {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    .footerItem:last-child {
+        margin-top: 0;
+    }
+}

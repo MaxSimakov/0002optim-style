@@ -1,0 +1,57 @@
+
+	
+mixin searchPageContent(data)
+	-
+		let current= `Каталог`
+
+	// start searchPageContent
+	section.fullWidthSection
+		+breadcrumbsDef(items, current)
+		h1 Поиск
+		form.searchForm(action='')
+			input(type='text' placeholder='Поиск')
+			button.submit Найти
+		.resultPage
+			p
+				| Результат поиска по запросу: 
+				span.resultTitle Платья
+				|  Найдено 620
+		.catalogItemWrapper.item5
+			+productItem(`n`, `h`, `product.png`, `Артикул: 68089046`, `Костюм рабочий с наколенниками и налакотниками мужской`, `9 990 ₽`, `10 100 ₽`)
+			+productItem(`n`, ``, `product-2.png`, `Артикул: А161.1/15`, `Костюм мужской для защиты от ОПЗ (У101)`, ``, `6 000 ₽`)
+			+productItem(`n`, ``, `product-3.png`, `Артикул: А1654654`, `Костюм ИНЖЕНЕР женский`, ``, `1 115 ₽`)
+			+productItem(`n`, ``, `product-4.png`, `Артикул: S40678`, `Футболка трикотажная (белый)`, ``, `340.5 ₽`)
+			+productItem(`n`, ``, `product-5.png`, `Артикул: M78`, `Защитный крем для рук АРМАКОН ПРОТЕКТ, туба 100 мл`, ``, `625 ₽`)
+
+			+productItem(`n`, `h`, `product.png`, `Артикул: 68089046`, `Костюм рабочий с наколенниками и налакотниками мужской`, `9 990 ₽`, `10 100 ₽`)
+			+productItem(`n`, ``, `product-2.png`, `Артикул: А161.1/15`, `Костюм мужской для защиты от ОПЗ (У101)`, ``, `6 000 ₽`)
+			+productItem(`n`, ``, `product-3.png`, `Артикул: А1654654`, `Костюм ИНЖЕНЕР женский`, ``, `1 115 ₽`)
+			+productItem(`n`, ``, `product-4.png`, `Артикул: S40678`, `Футболка трикотажная (белый)`, ``, `340.5 ₽`)
+			+productItem(`n`, ``, `product-5.png`, `Артикул: M78`, `Защитный крем для рук АРМАКОН ПРОТЕКТ, туба 100 мл`, ``, `625 ₽`)
+
+			+productItem(`n`, `h`, `product.png`, `Артикул: 68089046`, `Костюм рабочий с наколенниками и налакотниками мужской`, `9 990 ₽`, `10 100 ₽`)
+			+productItem(`n`, ``, `product-2.png`, `Артикул: А161.1/15`, `Костюм мужской для защиты от ОПЗ (У101)`, ``, `6 000 ₽`)
+			+productItem(`n`, ``, `product-3.png`, `Артикул: А1654654`, `Костюм ИНЖЕНЕР женский`, ``, `1 115 ₽`)
+			
+		.pagination
+			ul
+				li
+					a(href='')
+						i.fa.fa-angle-left(aria-hidden='true')
+				li
+					a(href='') 1
+				li
+					a(href='') 2
+				li
+					a(href='') 3
+				li
+					span 4
+				li
+					a(href='') 5
+				li
+					a(href='') 6
+				li
+					a(href='')
+						i.fa.fa-angle-right(aria-hidden='true')
+
+	// end searchPageContent

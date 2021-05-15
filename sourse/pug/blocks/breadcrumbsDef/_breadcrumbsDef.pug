@@ -1,0 +1,16 @@
+mixin breadcrumbsDef(items, current)
+	// start breadcrumbsDef
+	.breadcrumbs
+		.breadcrumbs__inner
+			.crumb
+				div
+					a(href='/index.html') Главная
+			mixin crumb(l, t)
+				.crumb
+					div
+						a(href=`/${l}.html`)!= t
+			if items
+				each text, link in items
+					+crumb(link, text)
+			.crumb #[span!= current]
+	// end breadcrumbsDef

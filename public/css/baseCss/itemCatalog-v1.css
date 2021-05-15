@@ -1,0 +1,159 @@
+.productItem .priceWrap {
+    margin: 10px 0 27px;
+}
+
+.productItem .topInfoItemLeft .blk {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 5px;
+    float: left;
+    clear: both;
+}
+
+.productItem .priceWrap * {
+    font-size: 17px;
+}
+
+.productItem .priceWrap i {
+    font-size: 14px;
+    color: inherit;
+}
+
+.productItem .priceWrap .oldPrice {
+    color: #e02126;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.productItem {
+    border: 1px solid #f2f2f2;
+    background-color: #ffffff;
+    padding: 30px 20px 35px;
+    width: 25%;
+    position: relative;
+}
+
+.priceWrap>div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.productItem .namePriductLink {
+    font-size: 14px;
+    color: #081727;
+    line-height: 18px;
+    min-height: 55px !important;
+    margin-bottom: 18px;
+    text-decoration: none;
+    display: block;
+}
+
+.productItem .articul {
+    color: #838b93;
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+.productItem img {
+    width: 100%;
+}
+
+.productItem:hover {
+    box-shadow: 0 10px 24px rgb(0 0 0 / 15%);
+    position: relative;
+    z-index: 1;
+}
+
+.topInfoItemLeft {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.topInfoItemRight {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: 0;
+}
+
+.productItem:hover .topInfoItemRight {
+    opacity: 1;
+}
+
+.catalogItemWrapper {
+    display: flex;
+    margin-top: 1px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.productItem {
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+.productItem .topInfoItemRight i {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #fff;
+    color: #000;
+    display: inline-block;
+    line-height: initial;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productItem i {
+    cursor: pointer;
+}
+
+.productItem .topInfoItemRight button.active i,
+.productItem .topInfoItemRight button:hover i {
+    background-color: #e02126;
+    color: #fff;
+}
+
+.item5 .productItem {
+    width: 20%;
+}
+
+@media (max-width:1130px) {
+    .productItem {
+        width: 33%;
+    }
+}
+
+@media (max-width:1024px) {
+    .item5 .productItem {
+        width: 25%;
+    }
+}
+
+@media (max-width:800px) {
+    .productItem,
+    .item5 .productItem {
+        width: 33%;
+    }
+}
+
+@media (max-width: 500px) {
+    .productItem,
+    .item5 .productItem {
+        width: 50%;
+        padding: 10px;
+    }
+    .productItem .namePriductLink {
+        font-size: 12px;
+    }
+    .productItem .priceWrap * {
+        font-size: 15px;
+    }
+    .productItem .priceWrap .oldPrice {
+        margin-right: 2px;
+    }
+}

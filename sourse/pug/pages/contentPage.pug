@@ -1,0 +1,100 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/headerSlider/_headerSlider.pug
+//- include ../blocks/advantages/_advantages.pug
+//- include ../blocks/CatalogCategory/_CatalogCategory.pug
+//- include ../blocks/sliderProductItem/_sliderProductItem.pug
+//- include ../blocks/aboutCompany/_aboutCompany.pug
+//- include ../blocks/sServices/_sServices.pug
+include ../blocks/leftMenu/_leftMenu.pug
+//- include ../blocks/verticalFilter/_verticalFilter.pug
+//- include ../blocks/catalogItemPageContent/_catalogItemPageContent.pug
+include ../blocks/contentPageContent/_contentPageContent.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+	-
+		let current= title;
+		let items= {
+			'#':'Новости'
+			};
+
+block title
+	- let  title= 'Контентная страница'
+	title= title
+block pagecontent
+	+header()
+	section.fullWidthSection
+		+breadcrumbsDef(items, current)
+		h1 Контентная страница
+		.flexWrap.alignUp
+			.leftSidebar
+				+leftMenu2()
+				.bannerSidebar
+					a(href='/')
+						img(src='img/bannerSidebar.png' alt='')
+			+contentPageContent()
+	+footer()
+block foot
+	// JS
+	script.
+		// меню
+		(function($) {
+		var $nav = $('#main-nav');
+		var $toggle = $('.toggle');
+		var data = {};
+		var defaultData = {
+		maxWidth: false,
+		customToggle: $toggle,
+		levelTitles: false,
+		pushContent: '#container'
+		};
+		// calling like this only for demo purposes
+		const initNav = function(conf) {
+		var $old = $('.hc-offcanvas-nav');
+		setTimeout(function() {
+		if ($old.length) {
+		// clear previous instance
+		$old.remove();
+		}
+		}, $toggle.hasClass('toggle-open') ? 420 : 0);
+		if ($toggle.hasClass('toggle-open')) {
+		$toggle.click();
+		}
+		// remove old toggle click event
+		$toggle.off('click');
+		// remember data
+		$.extend(data, conf)
+		// call the plugin
+		$nav.clone().hcOffcanvasNav($.extend({}, defaultData, data));
+		}
+		// run first demo
+		initNav({});
+		$('.actions').find('a').on('click', function(e) {
+		e.preventDefault();
+		var $this = $(this).addClass('active');
+		var $siblings = $this.parent().siblings().children('a').removeClass('active');
+		initNav(eval('(' + $this.data('demo') + ')'));
+		});
+		$('.actions').find('input').on('change', function() {
+		var $this = $(this);
+		var data = eval('(' + $this.data('demo') + ')');
+		if ($this.is(':checked')) {
+		initNav(data);
+		} else {
+		var removeData = {};
+		$.each(data, function(index, value) {
+		removeData[index] = false;
+		});
+		initNav(removeData);
+		}
+		});
+		})(jQuery);
+
+
+
+

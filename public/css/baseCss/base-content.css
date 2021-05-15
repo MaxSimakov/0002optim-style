@@ -1,0 +1,206 @@
+.textContent .advantagesInfo {
+    width: 49%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 27px;
+}
+
+.textContent .advantagesInfo p {
+    width: calc(100% - 70px);
+    padding-left: 10px;
+    margin: 0;
+}
+
+.textContent table td p {
+    margin: 0;
+}
+
+.textContent table td p+p {
+    margin-top: 10px;
+}
+
+.textContent .advantageItem {
+    margin-bottom: 0;
+}
+
+.textContent p {
+    margin: 20px 0;
+}
+
+.textContent h3 {
+    font-size: 22px;
+    margin: 60px 0 25px;
+}
+
+.textContent h2 {
+    margin: 60px 0 30px;
+}
+
+.textContent table td,
+.textContent table td *,
+.textContent table th,
+.textContent table th * {
+    line-height: 20px;
+}
+
+.textContent table th,
+.textContent table th * {
+    font-weight: 600;
+    text-align: left;
+}
+
+.textContent h1,
+.textContent h2,
+.textContent h3,
+.textContent h4,
+.textContent h5,
+.textContent h6 {
+    font-weight: 600;
+}
+
+.textContent h4,
+.textContent h5,
+.textContent h6 {
+    margin: 24px 0;
+}
+
+.textContent table {
+    margin-bottom: 50px;
+}
+
+.textContent h4 {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.textContent h2 {
+    margin: 60px 0 30px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.textContent table {
+    border-collapse: collapse;
+}
+
+.textContent table td,
+.textContent table th {
+    border: 1px solid #f2f2f2;
+    padding: 18px 20px;
+    vertical-align: top;
+}
+
+.textContent .item2td td:nth-child(1) {
+    width: 30%;
+}
+
+.textContent .item3td td {
+    width: 33%;
+}
+
+.textContent .item4td td {
+    width: 25%;
+}
+
+.textContent .item5td td {
+    width: 20%;
+}
+
+.textContent ul li::marker,
+.textContent ol li::marker {
+    color: red;
+}
+
+.textContent ul,
+.textContent ol {
+    margin: 30px 0 60px;
+}
+
+.textContent * {
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 400;
+}
+
+.textContent li+li {
+    margin-top: 20px;
+}
+
+.textContent ul {
+    margin-left: 16px;
+}
+
+.textContent ol {
+    margin-left: 12px;
+}
+
+.textContent ol li:before {
+    content: counter(num) '.';
+    counter-increment: num;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: -26px;
+    width: 20px;
+    color: #ef6780;
+    text-align: right;
+}
+
+.textContent>p:first-child,
+.textContent>p:first-child h2 {
+    margin-top: 0;
+}
+
+.textContent blockquote {
+    padding: 47px 30px 30px;
+    border: 1px solid #f2f2f2;
+    position: relative;
+}
+
+.textContent blockquote:before {
+    content: '”';
+    display: block;
+    width: 41px;
+    height: 41px !important;
+    background-color: #e02126;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 20px);
+    top: -20px;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 19px;
+    box-sizing: border-box;
+}
+
+@media (max-width:800px) {
+    .textContent .advantagesInfo {
+        width: 100%;
+    }
+    .textContent table td,
+    .textContent table th {
+        padding: 10px 5px;
+    }
+}
+
+@media (max-width:500px) {
+    .textContent table td,
+    .textContent table td *,
+    .textContent table th,
+    .textContent table th * {
+        font-size: 12px;
+    }
+    .textContent .advantagesInfo {
+        align-items: flex-start;
+    }
+    .textContent .advantageItem {
+        position: relative;
+        top: 8px;
+    }
+    .textContent blockquote {
+        padding: 40px 20px 20px;
+    }
+}

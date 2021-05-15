@@ -1,0 +1,52 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/homeMenuSlider/_homeMenuSlider.pug
+//- include ../blocks/advantages/_advantages.pug
+include ../blocks/CatalogCategory/_CatalogCategory.pug
+//- include ../blocks/sliderProductItem/_sliderProductItem.pug
+//- include ../blocks/aboutCompany/_aboutCompany.pug
+//- include ../blocks/sServices/_sServices.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+	-
+		let current= title;
+
+		let itemsCatalog = [
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-1.jpg`, text: `Спецодежда`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-2.jpg`, text: `Спецобувь`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-3.jpg`, text: `СИЗ (Защита рук)`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-4.jpg`, text: `Защита глаз`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-5.jpg`, text: `Защита лица`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-6.jpg`, text: `Защита головы`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-7.jpg`, text: `Защита слуха`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-8.jpg`, text: `Защита органов дыхания`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-9.jpg`, text: `СИЗ (Защита от падений с высоты)`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-10.jpg`, text: `Сопутствующие товары`}
+		];
+
+
+block title
+	- let  title= 'Каталог'
+	title= title
+block pagecontent
+	+header()
+	section.fullWidthSection
+		+breadcrumbsDef(items, current)
+		h1 Каталог
+		+CatalogCategory(...itemsCatalog)
+			.textContent
+				p С момента своего основания в 1993 году ООО торгово-промышленная компания «Оптим-капитал» работает в области охраны и безопасности труда и специализируется на комплексном обеспечении предприятий спецодеждой, спецобувью и средствами индивидуальной защиты.
+				p Специфика деятельности компании заключается в том, что мы квалифицированно подбираем СИЗ с учетом условий труда на каждом рабочем месте. Накопленный многолетний опыт и знания в области охраны труда позволяют профессионально решать эти вопросы. На сегодняшний день компания предлагает более 800 наименований средств индивидуальной защиты. 
+					a(href='#') Постоянное участие
+					|  специалистов ООО ТПК «Оптим-капитал» в выставках, конференциях, посвященных вопросам охраны и безопасности труда, тесное сотрудничество с мировыми лидерами производства СИЗ, позволяет нам быть в курсе новых тенденций на рынке профессиональных средств защиты и предлагать лучшие современные разработки своим партнерам.
+	+footer()
+block foot
+	// JS
+
+
+

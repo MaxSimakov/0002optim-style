@@ -1,0 +1,27 @@
+.compare,
+.favorites {
+    cursor: pointer;
+}
+
+.compare i+span {
+    margin-left: 10px;
+}
+
+.favorites i+span {
+    margin-left: 5px;
+}
+
+.compare button:hover *,
+.favorites button:hover * {
+    color: var(--mainColorHover);
+}
+
+.compare.active *,
+.favorites.active button * {
+    color: var(--mainButtonHover);
+}
+
+i.icon-favorit,
+i.icon-favorit {
+    font-size: 15px;
+}

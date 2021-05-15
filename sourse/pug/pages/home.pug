@@ -1,0 +1,168 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+include ../blocks/headerSlider/_headerSlider.pug
+include ../blocks/advantages/_advantages.pug
+include ../blocks/CatalogCategory/_CatalogCategory.pug
+include ../blocks/sliderProductItem/_sliderProductItem.pug
+include ../blocks/aboutCompany/_aboutCompany.pug
+include ../blocks/sServices/_sServices.pug
+include ../blocks/leftMenu/_leftMenu.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+	-
+		let itemsCatalog = [
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-1.jpg`, text: `Спецодежда`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-26.jpg`, text: `Спецобувь`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-3.jpg`, text: `СИЗ (Защита рук)`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-4.jpg`, text: `Защита глаз`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-5.jpg`, text: `Защита лица`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-27.jpg`, text: `Защита головы`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-7.jpg`, text: `Защита слуха`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-8.jpg`, text: `Защита органов дыхания`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-9.jpg`, text: `СИЗ (Защита от падений с высоты)`},
+			{link: `/Users/admin/Desktop/WebPultProjects/optima.wpult.ru/category.html`, img: `catalog-10.jpg`, text: `Сопутствующие товары`}
+		];
+
+block title
+	- let  title= 'Главная'
+	title= title
+block pagecontent
+	+header()
+	.homeMenuSlider.fullWidthSection
+		.flexWrap.alignUp
+			.leftSidebar
+				+leftMenu()
+			+headerSlider()
+	+advantages()
+	section.fullWidthSection
+		h2.caption Каталог
+		+CatalogCategory(...itemsCatalog).home
+	section.fullWidthSection
+		.tabsInfo
+			#tabs
+				ul.tabs-nav.mb-0
+					li
+						a(href='#tab-1') Новинки
+					li
+						a(href='#tab-2') Рекомендуем
+				.tabs-items
+					#tab-1.tabs-item
+						+sliderProductItem()
+					#tab-2.tabs-item
+						+sliderProductItem2()
+	+aboutCompany()
+	+sServices()
+	+footer()
+block foot
+	// JS
+	script.
+		$('.headerSlider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		dots: true,
+		appendArrows: $('#sliderHeaderNav'),
+		prevArrow: '<div class="prev fa fa-angle-left" aria-hidden="true"></div>',
+		nextArrow: '<div class="next fa fa-angle-right" aria-hidden="true"></div>',
+		});
+	//- // Карусель новинок
+	script.
+		$('.sliderProductItem').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		arrows: true,
+		infinite: true,
+		appendArrows: $('#sliderProductsNav'),
+		prevArrow: '<div class="prev fa fa-angle-left" aria-hidden="true"></div>',
+		nextArrow: '<div class="next fa fa-angle-right" aria-hidden="true"></div>',
+		responsive: [{
+		breakpoint: 1200,
+		settings: {
+		slidesToShow: 4
+		}
+		}, {
+		breakpoint: 850,
+		settings: {
+		slidesToShow: 3
+		}
+		}, {
+		breakpoint: 730,
+		settings: {
+		slidesToShow: 2
+		}
+		}, {
+		breakpoint: 480,
+		settings: {
+		slidesToShow: 2
+		}
+		}]
+		});
+	script.
+		$('.sliderProductItem2').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		arrows: true,
+		infinite: true,
+		appendArrows: $('#sliderProducts2Nav'),
+		prevArrow: '<div class="prev fa fa-angle-left" aria-hidden="true"></div>',
+		nextArrow: '<div class="next fa fa-angle-right" aria-hidden="true"></div>',
+		responsive: [{
+		breakpoint: 1200,
+		settings: {
+		slidesToShow: 4
+		}
+		}, {
+		breakpoint: 850,
+		settings: {
+		slidesToShow: 3
+		}
+		}, {
+		breakpoint: 730,
+		settings: {
+		slidesToShow: 2
+		}
+		}, {
+		breakpoint: 480,
+		settings: {
+		slidesToShow: 2
+		}
+		}]
+		});
+	script.
+		$(document).ready(function () {
+		var element = $(".fixed_block");
+		var height_el = element.offset().top;
+		$(".fixed_block_position").css({
+		"width": element.outerWidth(),
+		"height": element.outerHeight()
+		});
+		$(window).scroll(function () {
+		if ($(window).scrollTop() > height_el) {
+		element.addClass("fixedUp");
+		} else {
+		element.removeClass("fixedUp");
+		}
+		});
+		});
+	script.
+		$(function () {
+		var tab = $('#tabs .tabs-items > div');
+		tab.hide().filter(':first').show();
+		// Клики по вкладкам.
+		$('#tabs .tabs-nav a').click(function () {
+		tab.hide();
+		tab.filter(this.hash).show();
+		$('#tabs .tabs-nav a').removeClass('active');
+		$(this).addClass('active');
+		return false;
+		}).filter(':first').click();
+		// Клики по якорным ссылкам.
+		//- $('.tabs-target').click(function () {
+		//- $('#tabs .tabs-nav a[href=' + $(this).data('id') + ']').click();
+		//- });
+		});

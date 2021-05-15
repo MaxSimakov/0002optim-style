@@ -1,0 +1,395 @@
+#phone-icon {
+    display: none;
+}
+
+.allPhoneNumbers:hover i.icon-arrow_down {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    right: -32px;
+}
+
+.capContainer {
+    padding: 12px 0;
+}
+
+.capContainer .allPhoneNumbers {
+    width: 232px;
+    position: relative;
+}
+
+.capContainer .allPhoneNumbers .contacts:hover,
+.capContainer .contacts.allPhoneNumbers:hover {
+    background-color: #f8f8f9;
+}
+
+.capContainer .allPhoneNumbers:hover .contactsWrapper {
+    height: initial;
+    overflow: initial;
+    width: 100%;
+    padding-top: 75px;
+    box-shadow: 0 10px 24px rgb(000/15%);
+    border: 1px solid #f2f2f2;
+    background-color: #ffffff;
+}
+
+.capContainer .contacts {
+    position: relative;
+    padding: 19px 20px;
+}
+
+.capContainer .contacts span {
+    display: block;
+    padding-top: 3px;
+    color: var(--lightGrey);
+    font-size: 12px;
+}
+
+.capContainer .contacts>a,
+.capContainer .contacts>span {
+    position: relative;
+    z-index: 4;
+}
+
+.capContainer .contactsContainer>.contacts+.contacts {
+    margin-left: 30px;
+}
+
+.capContainer .contactsWrapper {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.capContainer .contactsWrapper .contacts {
+    border-top: 1px solid #f2f2f2;
+    width: 100%;
+}
+
+.capContainer .contactsWrapper .contacts:last-child {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.capContainer .icons * {
+    font-size: 13px;
+    color: #4c4c4c;
+}
+
+.capContainer .icons .active i {
+    color: var(--mainColorHover);
+}
+
+.capContainer .icons .active span {
+    color: var(--mainColor);
+}
+
+.capContainer .icons .active:hover i,
+.capContainer .icons .active:hover span,
+.capContainer .icons button {
+    color: var(--mainButtonHover);
+}
+
+.capContainer .icons a i.icon-cart {
+    font-size: 18px;
+}
+
+.capContainer .icons a,
+.capContainer .icons button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.capContainer .icons a:hover i,
+.capContainer .icons button:hover i {
+    color: var(--mainColorHover);
+}
+
+.capContainer .icons a:hover span,
+.capContainer .icons button:hover span {
+    color: var(--mainColorHover);
+}
+
+.capContainer .icons button {
+    cursor: pointer;
+}
+
+.capContainer .icons i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.capContainer .icons i,
+.capContainer .icons div {
+    color: #4c4c4c;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.capContainer .icons span {
+    display: block;
+}
+
+.capContainer .icons span,
+.capContainer .icons a {
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.capContainer .icons+.icons {
+    margin-left: 30px;
+}
+
+.capContainer .icons::after {
+    color: #848484;
+    content: attr(data-tooltip);
+    margin-top: 5px;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+    box-shadow: 0 10px 24px rgb(0 0 0 / 15%);
+    background-color: #ffffff;
+    font-size: 10px;
+    line-height: 14px;
+    max-width: 220px;
+    padding: 4px;
+    left: initial;
+    right: initial;
+    text-align: center;
+}
+
+.capContainer .icons:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.capContainer .logo {
+    width: 238px;
+    margin-right: 60px;
+}
+
+.capContainer .logo img {
+    display: block;
+    width: 100%;
+}
+
+.capContainer.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 10px 24px rgb(0 0 0 / 15%);
+    border-bottom: 1px solid #f2f2f2;
+    padding: 0;
+}
+
+.capContainer.fixed+div {
+    margin-top: 83px;
+}
+
+.contacts a {
+    color: var(--mainColor);
+    font-size: 16px;
+}
+
+.contacts i.icon-arrow_down {
+    font-size: 5px;
+    color: var(--lightGrey);
+    position: absolute;
+    right: -28px;
+    top: 7px;
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.contacts i.icon-svg1 {
+    margin-left: -25px;
+    color: var(--mainColorHover);
+    margin-right: 6px;
+}
+
+.contacts i.svg1 {
+    margin-left: -28px;
+    color: var(--mainColorHover);
+}
+
+.forMobile {
+    display: none;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.icons div .icons i:hover {
+    color: var(--mainColorHover);
+}
+
+.menuDesctop .icon-cancel,
+#cancelPhone,
+.c-menu__close,
+.OpenMenu {
+    display: none;
+}
+
+.rouble {
+    display: inline!important;
+}
+
+@media (max-width:1189px) {
+    .capContainer .contactsWrapper {
+        height: initial;
+        position: initial;
+    }
+    .capContainer .allPhoneNumbers {
+        width: 100%;
+    }
+    .contacts i {
+        display: none;
+    }
+    .capContainer .contacts .contacts {
+        padding-left: 0px;
+    }
+    .capContainer .contacts {
+        padding: 20px;
+    }
+    .contacts {
+        border-bottom: 1px solid #f2f2f2;
+        border-top: 0px !important;
+    }
+    .contactsWrapper .contacts:last-child {
+        border: none !important;
+    }
+    .capContainer .allPhoneNumbers:hover .contactsWrapper {
+        padding-top: 0;
+        box-shadow: none;
+        border: none;
+    }
+    .contacts:hover {
+        background-color: #f8f8f9;
+    }
+    #phone-icon {
+        display: initial;
+        color: #4c4c4c;
+        cursor: pointer;
+        font-size: 23px;
+    }
+    #cancelPhone {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: #4c4c4c;
+        cursor: pointer;
+        z-index: 10;
+        display: block !important;
+    }
+    #phoneWP {
+        display: none;
+    }
+    #phoneWP {
+        position: absolute;
+        top: 72px;
+        width: 100%;
+        background: #fff;
+        z-index: 99;
+        left: 0;
+        box-shadow: 0 10px 24px rgb(0 0 0 / 15%);
+        border: 1px solid #f2f2f2;
+    }
+    .capContainer .contactsContainer>.contacts+.contacts {
+        margin-left: 0px;
+    }
+    .capContainer .icons+.icons {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width:1024px) {
+    .userConvenienceWrap {
+        display: block !important;
+    }
+    .userConvenienceWrap a:before {
+        margin-right: 10px;
+        width: 17px;
+    }
+    .logo {
+        margin-left: 60px;
+    }
+    .capContainer .contacts {
+        padding: 20px 60px;
+    }
+    #cancelPhone {
+        right: 100px;
+    }
+    .forMobile {
+        display: initial;
+    }
+}
+
+@media (max-width:800px) {
+    #phoneWP {
+        top: 60px;
+    }
+    .leftSidebar {
+        display: none;
+    }
+    .likeBlk,
+    .compareBlk,
+    .userBlk {
+        display: none;
+    }
+    .capContainer .icons i.icon-search {
+        font-size: 25px !important;
+        margin-left: 10px !important;
+    }
+    .capContainer .icons i.icon-cart {
+        font-size: 28px !important;
+    }
+    .basketBlk a i+div {
+        display: none !important;
+    }
+    #sliderHeaderNav {
+        display: none;
+    }
+    .capContainer .logo {
+        width: 124px;
+        margin: 0 32px 0 35px;
+    }
+    #phone-icon {
+        font-size: 17px;
+        left: -4px;
+        position: relative;
+    }
+    .capContainer .icons i.icon-search {
+        font-size: 18px !important;
+        margin-left: 0;
+    }
+    .capContainer .icons+.icons {
+        margin-left: 0;
+    }
+    .capContainer .icons i.icon-cart {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width:600px) {
+    .capContainer .contacts {
+        padding: 20px 17px;
+    }
+}
+
+@media (max-width:400px) {
+    .capContainer {
+        border-bottom: 1px solid #b7b6b6;
+        padding: 4px 0;
+    }
+    #phoneWP {
+        top: 45px;
+    }
+}

@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--mailColor);
+    font-size: 14px;
+    background-repeat: no-repeat!important;
+    font-family: var(--font);
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0 auto;
+    overflow-x: hidden;
+    min-width: 320px;
+    box-sizing: border-box;
+}
+
+::before,
+::after,
+* {
+    background-repeat: no-repeat
+}
+
+:focus {
+    outline: 0
+}
+
+a {
+    text-decoration: none
+}
+
+a,
+span,
+b {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit
+}
+
+input::-webkit-input-placeholder {
+    color: #e4e4e4
+}
+
+input::-moz-placeholder {
+    color: #e4e4e4
+}
+
+input:-moz-placeholder {
+    color: #e4e4e4
+}
+
+input:-ms-input-placeholder {
+    color: #e4e4e4
+}
+
+input {
+    font-size: 14px;
+    border-radius: 0!important
+}
+
+*,
+:before,
+:after {
+    background-repeat: no-repeat!important
+}
+
+p {
+    line-height: 22px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    line-height: 1.2em;
+}
+
+ul li,
+ol li {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+a:hover {
+    color: var(--mainColorHover);
+}

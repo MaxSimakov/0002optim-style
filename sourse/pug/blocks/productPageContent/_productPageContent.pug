@@ -1,0 +1,227 @@
+mixin productPageContent(data)
+	// start productPageContent
+	.flexWrap.productPage
+		h1 Комбинезоны защитные
+		.imagesWrapper
+			.sliderImage
+				.slider.slider-for
+					div
+						a(href='img/type-1-big.png' data-fancybox='gallery')
+							img(src='img/type-1-big.png' alt='')
+					div
+						a(href='img/type-1-big.png' data-fancybox='gallery')
+							img(src='img/type-1-big.png' alt='')
+					div
+						a(href='img/type-1-big.png' data-fancybox='gallery')
+							img(src='img/type-1-big.png' alt='')
+					div
+						a(href='img/type-1-big.png' data-fancybox='gallery')
+							img(src='img/type-1-big.png' alt='')
+				.sliderNav
+					.slider.slider-nav
+						div
+							img(src='img/type-1.png' alt='')
+						div
+							img(src='img/type-2.png' alt='')
+						div
+							img(src='img/type-3.png' alt='')
+						div
+							img(src='img/type-2.png' alt='')
+					#sliderNavPage.sliderNavIcons
+		.infoProductWrapper
+			.topInfo
+				.blk.new Новинка
+				.blk.hit Хит
+				+rating
+					span 3 отзыва
+			.productAdvantages
+				.advantageItem(data-tooltip='Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
+					img(src='img/icons/oil.png' alt='')
+				.advantageItem(data-tooltip='Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
+					img(src='img/icons/bug.png' alt='')
+				.advantageItem(data-tooltip='Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
+					img(src='img/icons/lifejacket.png' alt='')
+				.advantageItem(data-tooltip='Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
+					img(src='img/icons/fire.png' alt='')
+				.advantageItem(data-tooltip='Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
+					img(src='img/icons/rainy.png' alt='')
+				.advantageItem(data-tooltip='Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
+					img(src='img/icons/acid.png' alt='')
+				.advantageItem(data-tooltip='Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
+					img(src='img/icons/snowflake.png' alt='')
+				.advantageItem(data-tooltip='Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
+					img(src='img/icons/tube.png' alt='')
+				.advantageItem(data-tooltip='Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
+					img(src='img/icons/acid2.png' alt='')
+				.advantageItem(data-tooltip='Lorem ipsum dolor, sit amet consectetur adipisicing elit.')
+					img(src='img/icons/tube2.png' alt='')
+			.subTitle Характеристики :
+			.productSpecificationsWrapper
+				.productSpecification
+					span Ткань 
+					p Ст-2 245 г/м, отделка тк. Томбой пл. 245 
+				.productSpecification
+					span Куртка 
+					p
+						| укороченная с регулировкой объема внизу с хлястиками на липучках и пряжками, с застежкой на молнию.
+				.productSpecification
+					span Светоотражающие полосы 
+					p на плечах, спине, рукавах
+				.productSpecification
+					span Карманы 
+					p
+						| полочки с четьмы боковыми внутренними карманами в подрезных бочках(два из них застегиваются на молнию) и двумя нагрудными карманами с кнопками. Рукава полуреглан с усилительными плечевыми накладками, переходящими на кокетку спинки, с выточками в области локтя для облегчения основного положения рук при выполнении работ, с манжетами на липучках.
+				.productSpecification
+					span Светоотражающие полосы 
+					p на плечах, спине, рукавах 
+			a.link.tabs-target(href='#tabs' data-id='#tab-2') Смотреть все характеристики
+		.productPriceWrapper
+			.inStock
+				.yes В наличии
+				// <div class="no">Нет в наличии</div>
+			.priceWrapper
+				.productPrice
+					| 10 100 ₽
+				.oldPrice
+					| 9 990 ₽
+			.subTitle Размеры:
+			.sizeWrapper
+				.checkboxWrap
+					input#size46(type='checkbox' value='46')
+					label(for='size46') 46
+				.checkboxWrap
+					input#size47(type='checkbox' value='47')
+					label(for='size47') 47
+				.checkboxWrap
+					input#size46(type='checkbox' disabled='' value='48')
+					label(for='size48') 48
+				.checkboxWrap
+					input#size88-92(type='checkbox' value='88-92')
+					label(for='size88-92') 88-92
+			.subTitle Рост:
+			.sizeWrapper
+				.checkboxWrap
+					input#height170-176(type='checkbox' value='170-176')
+					label(for='height170-176') 170-176
+				.checkboxWrap
+					input#height182-188(type='checkbox' value='182-188')
+					label(for='height182-188') 182-188
+			.h30
+			.flexWrap
+				.countWrapper
+					button
+						span
+					input(type='text' value='999' pattern='[ 0-9]')
+					button
+						span
+						span
+				button.btn(type='button') Купить
+			.h30
+			.flexWrap.contentLeft
+				.favorites
+					button
+						i.icon-favorit
+						span В избранное
+				.compare
+					button
+						i.icon-compare.compareIcon
+						span В сравнение
+			.line
+			.deliveryInfo
+				i.icon-delivery-box
+				| Доставка по Москве: 2-3 дня
+	.tabsInfo
+		#tabs
+			// Кнопки
+			ul.tabs-nav
+				li
+					a(href='#tab-1') Описание
+				li
+					a(href='#tab-2') Характеристики
+				li
+					a(href='#tab-3') Отзывы
+			.tabs-items
+				#tab-1.tabs-item
+					p
+						| Костюм поварской ГУРМАН состоит из куртки и брюк. Куртка с центральной бортовой застежкой, с воротником-стойкой, с двумя боковыми накладными карманами. Рукава длинные. Брюки с притачным поясом, с застежкой на молнию, с боковыми карманами. Цвет: белый/серый.
+					p
+						| Халат женский производственный с центральной застежкой на пуговицы. Халат изготовлен из смесовой ткани с содержанием вискозы. Модель приталенного силуэта с контрастной отделкой по воротнику и карманам. Рукав длинный. Цвет: морская волна. Соответствует ТР ТС 019/2011
+				#tab-2.tabs-item
+					.productSpecificationsWrapper
+						.productSpecification
+							span Ткань 
+							p Ст-2 245 г/м, отделка тк. Томбой пл. 245 
+						.productSpecification
+							span Куртка 
+							p
+								| укороченная с регулировкой объема внизу с хлястиками на липучках и пряжками, с застежкой на молнию.
+						.productSpecification
+							span Светоотражающие полосы 
+							p на плечах, спине, рукавах
+						.productSpecification
+							span Карманы 
+							p
+								| полочки с четьмы боковыми внутренними карманами в подрезных бочках(два из них застегиваются на молнию) и двумя нагрудными карманами с кнопками. Рукава полуреглан с усилительными плечевыми накладками, переходящими на кокетку спинки, с выточками в области локтя для облегчения основного положения рук при выполнении работ, с манжетами на липучках.
+						.productSpecification
+							span Светоотражающие полосы 
+							p на плечах, спине, рукавах 
+				#tab-3.tabs-item
+					.button2 Оставить отзыв
+					.feedbackWrapper
+						.feedback
+							.flexWrap.contentLeft
+								.feedbackName Иван Петров
+								.date 24.02.2021 10:36:56
+								+rating
+							.feedbackText
+								p
+									| Ваш первый заказ в интернет-магазине? Мы с радостью подскажем как сделать покупки в интернете простыми и удобными.
+							a.link(href='') Ответить
+							.feedback
+								.flexWrap.contentLeft
+									.feedbackName Иван Петров
+									.date 24.02.2021 10:36:56
+								.feedbackText
+									p
+										| Мы гордимся безупречной репутацией нашего магазина. Если товар не устроит вас, вы всегда сможете вернуть деньги.Мы гордимся безупречной репутацией нашего магазина. Если товар не устроит вас, вы всегда сможете вернуть деньги.Мы гордимся безупречной репутацией нашего магазина. Если товар не устроит вас, вы всегда сможете вернуть деньги.Мы гордимся безупречной репутацией нашего магазина. Если товар не устроит вас, вы всегда сможете вернуть деньги.
+								a.link(href='') Ответить
+						.feedback
+							.flexWrap.contentLeft
+								.feedbackName Иван Петров
+								.date 24.02.2021 10:36:56
+								+rating
+							.feedbackText
+								p
+									| Ваш первый заказ в интернет-магазине? Мы с радостью подскажем как сделать покупки в интернете простыми и удобными.
+							a.link(href='') Ответить
+						.feedback
+							.flexWrap.contentLeft
+								.feedbackName Иван Петров
+								.date 24.02.2021 10:36:56
+								+rating
+							.feedbackText
+								p
+									| Ваш первый заказ в интернет-магазине? Мы с радостью подскажем как сделать покупки в интернете простыми и удобными.
+							a.link(href='') Ответить
+					.pagination
+						ul
+							li
+								a(href='')
+									i.fa.fa-angle-left(aria-hidden='true')
+							li
+								a(href='') 1
+							li
+								a(href='') 2
+							li
+								a(href='') 3
+							li
+								span 4
+							li
+								a(href='') 5
+							li
+								a(href='') 6
+							li
+								a(href='')
+									i.fa.fa-angle-right(aria-hidden='true')
+
+	// end productPageContent

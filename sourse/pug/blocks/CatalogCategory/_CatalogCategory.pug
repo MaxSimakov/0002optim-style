@@ -1,0 +1,13 @@
+mixin CatalogCategory(...items)
+	// start CatalogCategory
+	.CatalogCategory&attributes(attributes)
+		mixin itemCatalog(data)
+			.itemCatalog
+				a(href=`${data.link}`)
+					img(src=`img/${data.img}` alt='')
+					span!= data.text
+		each item in items
+			+itemCatalog(item)
+	block
+	// end CatalogCategory
+

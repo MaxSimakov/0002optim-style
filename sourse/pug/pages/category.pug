@@ -1,0 +1,55 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/headerSlider/_headerSlider.pug
+//- include ../blocks/advantages/_advantages.pug
+include ../blocks/CatalogCategory/_CatalogCategory.pug
+//- include ../blocks/sliderProductItem/_sliderProductItem.pug
+//- include ../blocks/aboutCompany/_aboutCompany.pug
+//- include ../blocks/sServices/_sServices.pug
+//- include ../blocks/leftMenu/_leftMenu.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+	-
+		let items= {
+			'allCatalog':'Каталог'
+			};
+
+		let current= title;
+
+		let itemsCatalog = [
+			{link: `/catalogItemPage.html`, img: `catalog-11.jpg`, text: `От общепроизводственных`},
+			{link: `/catalogItemPage.html`, img: `catalog-12.jpg`, text: `Сигнальная спецодежда`},
+			{link: `/catalogItemPage.html`, img: `catalog-13.jpg`, text: `Одежда для охранных структур`},
+			{link: `/catalogItemPage.html`, img: `catalog-14.jpg`, text: `Рубашки и футболки`},
+			{link: `/catalogItemPage.html`, img: `catalog-15.jpg`, text: `Производственные халаты`},
+			{link: `/catalogItemPage.html`, img: `catalog-16.jpg`, text: `Одежда для работников общепита`},
+			{link: `/catalogItemPage.html`, img: `catalog-17.jpg`, text: `Защита от повышенных температур`},
+			{link: `/catalogItemPage.html`, img: `catalog-18.jpg`, text: `Защита от влаги`},
+			{link: `/catalogItemPage.html`, img: `catalog-19.jpg`, text: `Защита от кислот и щелочей`},
+			{link: `/catalogItemPage.html`, img: `catalog-20.jpg`, text: `Медицинская одежда`},
+			{link: `/catalogItemPage.html`, img: `catalog-21.jpg`, text: `Головные уборы`},
+			{link: `/catalogItemPage.html`, img: `catalog-22.jpg`, text: `Утепленная спецодежда`}
+		];
+
+block title
+	- let  title= 'Спецодежда'
+	title= title
+block pagecontent
+	+header()
+	section.fullWidthSection
+		+breadcrumbsDef(items, current)
+		h1 Спецодежда
+		+CatalogCategory(...itemsCatalog)
+			.textContent
+				p С момента своего основания в 1993 году ООО торгово-промышленная компания «Оптим-капитал» работает в области охраны и безопасности труда и специализируется на комплексном обеспечении предприятий спецодеждой, спецобувью и средствами индивидуальной защиты.
+				p Специфика деятельности компании заключается в том, что мы квалифицированно подбираем СИЗ с учетом условий труда на каждом рабочем месте. Накопленный многолетний опыт и знания в области охраны труда позволяют профессионально решать эти вопросы. На сегодняшний день компания предлагает более 800 наименований средств индивидуальной защиты. 
+					a(href='#') Постоянное участие
+					|  специалистов ООО ТПК «Оптим-капитал» в выставках, конференциях, посвященных вопросам охраны и безопасности труда, тесное сотрудничество с мировыми лидерами производства СИЗ, позволяет нам быть в курсе новых тенденций на рынке профессиональных средств защиты и предлагать лучшие современные разработки своим партнерам.
+	+footer()
+block foot
+	// JS
