@@ -460,9 +460,9 @@
 							<!-- end sliderProductItem-->
 						</div>
 						<div class="tabs-item" id="tab-2">
-							<!-- start sliderProductItem2-->
+							<!-- start sliderProductItem-->
 							<div class="sliderBg">
-								<div class="sliderProductItem2">
+								<div class="sliderProductItem">
 									<div>
 										<div class="productItem center">
 											<div class="topInfoItemLeft">
@@ -601,9 +601,9 @@
 										</div>
 									</div>
 								</div>
-								<div class="navButtons" id="sliderProducts2Nav"></div>
+								<div class="navButtons" id="sliderProductsNav"></div>
 							</div>
-							<!-- end sliderProductItem2-->
+							<!-- end sliderProductItem-->
 						</div>
 					</div>
 				</div>
@@ -738,41 +738,9 @@
 			slidesToScroll: 1,
 			arrows: true,
 			infinite: true,
-			appendArrows: $('#sliderProductsNav'),
-			prevArrow: '<div class="prev fa fa-angle-left" aria-hidden="true"></div>',
-			nextArrow: '<div class="next fa fa-angle-right" aria-hidden="true"></div>',
-			responsive: [{
-			breakpoint: 1200,
-			settings: {
-			slidesToShow: 4
-			}
-			}, {
-			breakpoint: 850,
-			settings: {
-			slidesToShow: 3
-			}
-			}, {
-			breakpoint: 730,
-			settings: {
-			slidesToShow: 2
-			}
-			}, {
-			breakpoint: 480,
-			settings: {
-			slidesToShow: 2
-			}
-			}]
-			});
-		</script>
-		<script>
-			$('.sliderProductItem2').slick({
-			slidesToShow: 5,
-			slidesToScroll: 1,
-			arrows: true,
-			infinite: true,
-			appendArrows: $('#sliderProducts2Nav'),
-			prevArrow: '<div class="prev fa fa-angle-left" aria-hidden="true"></div>',
-			nextArrow: '<div class="next fa fa-angle-right" aria-hidden="true"></div>',
+			//- appendArrows: $('#sliderProductsNav'),
+			prevArrow: '<div class="slick-btn prev fa fa-angle-left" aria-hidden="true"></div>',
+			nextArrow: '<div class="slick-btn next fa fa-angle-right" aria-hidden="true"></div>',
 			responsive: [{
 			breakpoint: 1200,
 			settings: {
@@ -820,7 +788,7 @@
 			// Клики по вкладкам.
 			$('#tabs .tabs-nav a').click(function () {
 			tab.hide();
-			tab.filter(this.hash).show();
+			tab.filter(this.hash).show().find('.sliderProductItem').slick('refresh');
 			$('#tabs .tabs-nav a').removeClass('active');
 			$(this).addClass('active');
 			return false;

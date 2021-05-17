@@ -11,7 +11,8 @@ extends layout/main.pug
 //- include ../blocks/sServices/_sServices.pug
 include ../blocks/leftMenu/_leftMenu.pug
 include ../blocks/verticalFilter/_verticalFilter.pug
-include ../blocks/catalogItemPageContent/_catalogItemPageContent.pug
+include ../blocks/sFilters/_sFilters.pug
+include ../blocks/catalogItem/_catalogItem.pug
 
 block variables
 	- let  mainPage= null 
@@ -39,7 +40,24 @@ block pagecontent
 				.bannerSidebar
 					a(href='/')
 						img(src='img/bannerSidebar.png' alt='')
-			+catalogItemPageContent()
+			.baseContentWrapper
+				+sFilters()
+				//- +catalogItem()
+				+catalogItem2()
+					.textContent
+						p
+							| С момента своего основания в 1993 году ООО торгово-промышленная компания «Оптим-капитал» работает в области
+							| охраны и безопасности труда и специализируется на комплексном обеспечении предприятий спецодеждой,
+							| спецобувью и
+							| средствами индивидуальной защиты.
+						p
+							| Специфика деятельности компании заключается в том, что мы квалифицированно подбираем СИЗ с учетом условий
+							| труда на каждом рабочем месте. Накопленный многолетний опыт и знания в области охраны труда позволяют
+							| профессионально
+							| решать эти вопросы. На сегодняшний день компания предлагает более 800 наименований средств индивидуальной
+							| защиты. 
+							a(href='#') Постоянное участие
+							|  специалистов ООО ТПК «Оптим-капитал» в выставках, конференциях, посвященных вопросам охраны и безопасности труда, тесное сотрудничество с мировыми лидерами производства СИЗ, позволяет нам быть в курсе новых тенденций на рынке профессиональных средств защиты и предлагать лучшие современные разработки	своим партнерам.
 	+footer()
 block foot
 	// JS

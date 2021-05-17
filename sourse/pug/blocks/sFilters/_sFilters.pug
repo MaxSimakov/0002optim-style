@@ -1,0 +1,136 @@
+mixin sFilters(data)
+	// start sFilters
+	.filtersWrapBg
+		.openFilters
+			i.fa.fa-sliders(aria-hidden='true')
+			| Фильтры
+		.filterWrapper
+			.fltWrap
+				.fltWrpaTitle Цена
+				.fltWrapInside
+					.wrapper.priceInput
+						input(type='text' placeholder='От')
+						input(type='text' placeholder='До')
+						.slidPriceWrapper
+							span.redLine
+							span.greyLine
+			.fltWrap
+				.fltWrpaTitle
+					span Пол
+				.fltWrapInside
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Женский
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Мужской
+			.fltWrap
+				.fltWrpaTitle.selected
+					span
+						| Состав ткани 
+						span (3)
+				.fltWrapInside
+					.checkboxWrapper
+						input(type='checkbox' name='' checked='')
+						label(for='') Состав ткани 1
+					.checkboxWrapper
+						input(type='checkbox' name='' checked='')
+						label(for='') Состав ткани 2
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Состав ткани 3
+					.checkboxWrapper
+						input(type='checkbox' name='' checked='')
+						label(for='') Состав ткани 4
+			.fltWrap
+				.fltWrpaTitle
+					span
+						| Серия 
+						span
+				.fltWrapInside
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Серия 1
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Серия 2
+			.fltWrap
+				.fltWrpaTitle Тип
+				.fltWrapInside
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Тип 1
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Тип 2
+			.fltWrap
+				.fltWrpaTitle Защитные свойства
+				.fltWrapInside
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Защитные свойства 1
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Защитные свойства 2
+			.fltWrap
+				.fltWrpaTitle Цвет
+				.fltWrapInside
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Цвет 1
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Цвет 2
+			.fltWrap
+				.fltWrpaTitle Производители
+				.fltWrapInside
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Производители 1
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Производители 2
+			.fltWrap
+				.fltWrpaTitle Название ткани
+				.fltWrapInside
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Название ткани 1
+					.checkboxWrapper
+						input(type='checkbox' name='')
+						label(for='') Название ткани 2
+			.selectedWrap
+				.selectedParameter
+					| Состав ткани 1 
+					i.icon-cancel-1
+				.selectedParameter
+					| Состав ткани 2 
+					i.icon-cancel-1
+				.selectedParameter
+					| Состав ткани 4 
+					i.icon-cancel-1
+			button.button2 Показать 6 предложений
+			button.refresh
+				i.fa.fa-refresh(aria-hidden='true')
+				|  Сбросить фильтр
+	.flexWrapper
+		.sortWrap
+			.fltWrap
+				.fltWrpaTitle
+					span
+						| Сортировка 
+						span
+				.fltWrapInside
+					.checkboxWrapper
+						input(type='radio' name='sortParam')
+						label(for='') По возратсанию цены
+					.checkboxWrapper
+						input(type='radio' name='sortParam')
+						label(for='') По убыванию цены
+		.listWrap
+			button.tile.active
+				+icon(`tile`)
+			button.list
+				+icon(`list`)
+
+	// end sFilters

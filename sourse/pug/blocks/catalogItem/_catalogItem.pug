@@ -1,0 +1,107 @@
+mixin catalogItem(data)
+	// start catalogItem
+	.catalogItemWrapper
+		+productItem(`n`, `h`, `product-2.png`, `Артикул: А161.1/15`, `Костюм мужской для защиты от ОПЗ (У101)`, `9 990 ₽`, `10 000 ₽`)
+		+productItem(`n`, ``, `product.png`, `Артикул: 68089046`, `Костюм рабочий с наколенниками и налакотниками мужской`, ``, `1115 ₽`)
+		+productItem(`n`, ``, `product-3.png`, `Артикул: S40678`, `Футболка трикотажная (белый)`, ``, `903 ₽`)
+		+productItem(``, `h`, `product-5.png`, `Артикул: M78`, `Защитный крем для рук АРМАКОН ПРОТЕКТ, туба 100 мл`, ``, `6571 ₽`)
+
+		+productItem(`n`, `h`, `product-6.png`, `Артикул: А110`, `Халат женский производственный`, ``, `4 600 ₽`)
+		+productItem(`n`, ``, `product-7.png`, `Артикул: А107`, `Халат х/б мужской`, ``, `890 ₽`)
+		+productItem(`n`, ``, `product-8.png`, `Артикул: А161.1/15`, `Халат х/б мужской`, `990 ₽`, `10 100 ₽`)
+		+productItem(``, `h`, `product-9.png`, `Артикул: А104`, `Халат х/б женский`, ``, `820 ₽`)
+
+		+productItem(`n`, `h`, `product-2.png`, `Артикул: А161.1/15`, `Костюм мужской для защиты от ОПЗ (У101)`, `9 990 ₽`, `10 000 ₽`)
+		+productItem(`n`, ``, `product.png`, `Артикул: 68089046`, `Костюм рабочий с наколенниками и налакотниками мужской`, ``, `1115 ₽`)
+		+productItem(`n`, ``, `product-3.png`, `Артикул: S40678`, `Футболка трикотажная (белый)`, ``, `903 ₽`)
+		+productItem(``, `h`, `product-5.png`, `Артикул: M78`, `Защитный крем для рук АРМАКОН ПРОТЕКТ, туба 100 мл`, ``, `6571 ₽`)
+	.pagination
+		ul
+			li
+				a(href='')
+					i.fa.fa-angle-left(aria-hidden='true')
+			li
+				a(href='') 1
+			li
+				a(href='') 2
+			li
+				a(href='') 3
+			li
+				span 4
+			li
+				a(href='') 5
+			li
+				a(href='') 6
+			li
+				a(href='')
+					i.fa.fa-angle-right(aria-hidden='true')
+	block
+	// end catalogItem
+
+
+mixin catalogItem2(data)
+	// start catalogItem2
+	.catalogItemWrapper2
+		mixin catalogItem2(l, h, n, img, art, text, old, act)
+			+b.catalogItem2
+				.row
+					.col-12.col-sm-5.col-md-auto
+						+e.flex-wrap--img
+							+e.img-wrap(href='#')
+								img(src=`img/${img}` alt='')
+					.col-12.col-sm-7.col-md
+						+e.flex-wrap--params
+							if l
+								+e.labels
+									if h
+										.blk.hit Хит
+									if n
+										.blk.new Новинка
+							+e.vendor-code!= art
+							+e.prod-name(href='#')!= text
+							+e.actions
+								.favorites
+									button
+										i.icon-favorit
+										span В избранное
+								.compare
+									button
+										i.icon-compare.compareIcon
+										span В сравнение
+					.col-12.col-md-auto
+						+e.flex-wrap--price
+							.priceWrap
+								if old
+									.oldPrice!= old
+								.activePrice!= act
+							a.button2(href='') Подробнее
+		+catalogItem2(`l`, `h`, `n`, `product-2.png`, `Артикул: А161.1/15`, `Костюм мужской для защиты от ОПЗ (У101)`, `9 990 ₽`, `10 000 ₽`)
+		+catalogItem2(`l`, `h`, `n`, `product.png`, `Артикул: 68089046`, `Костюм рабочий с наколенниками и налакотниками мужской`, ``, `1115 ₽`)
+		+catalogItem2(`l`, `h`, `n`, `product-3.png`, `Артикул: S40678`, `Футболка трикотажная (белый)`, ``, `903 ₽`)
+		+catalogItem2(``, ``, ``, `product-5.png`, `Артикул: M78`, `Защитный крем для рук АРМАКОН ПРОТЕКТ, туба 100 мл`, ``, `6571 ₽`)
+		+catalogItem2(`l`, ``, `n`, `product-6.png`, `Артикул: А110`, `Халат женский производственный`, ``, `4 600 ₽`)
+		+catalogItem2(`l`, `h`, ``, `product-7.png`, `Артикул: А107`, `Халат х/б мужской`, ``, `890 ₽`)
+		+catalogItem2(`l`, `h`, `n`, `product-8.png`, `Артикул: А161.1/15`, `Халат х/б мужской`, `990 ₽`, `10 100 ₽`)
+			
+	.pagination
+		ul
+			li
+				a(href='')
+					i.fa.fa-angle-left(aria-hidden='true')
+			li
+				a(href='') 1
+			li
+				a(href='') 2
+			li
+				a(href='') 3
+			li
+				span 4
+			li
+				a(href='') 5
+			li
+				a(href='') 6
+			li
+				a(href='')
+					i.fa.fa-angle-right(aria-hidden='true')
+	block
+	// end catalogItem2
