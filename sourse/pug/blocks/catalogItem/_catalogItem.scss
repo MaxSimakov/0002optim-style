@@ -168,13 +168,13 @@
 		@include media-breakpoint-down(sm) {
 			display: flex;
 			align-items: center;
-			justify-content: space-evenly;
+			justify-content: center;
 			margin-bottom: 18px;
 		}
 		@include media-breakpoint-only(sm) {
 			display: flex;
 			align-items: center;
-			justify-content: space-evenly;
+			justify-content: center;
 			width: 41%;
 		}
 		.oldPrice {

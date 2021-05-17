@@ -337,6 +337,14 @@ ul.tabs-nav li a {
 	@include mt;
 }
 
+.productItem {
+	display: flex;
+	flex-direction: column;
+	.priceWrap {
+		margin-top: auto;
+	}
+}
+
 .capInfo {
 	span,
 	a {
