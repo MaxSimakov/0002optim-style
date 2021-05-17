@@ -44,11 +44,11 @@ mixin catalogItem2(data)
 		mixin catalogItem2(l, h, n, img, art, text, old, act)
 			+b.catalogItem2
 				.row
-					.col-12.col-sm-5.col-md-auto
+					.col-5.col-md-auto
 						+e.flex-wrap--img
 							+e.img-wrap(href='#')
 								img(src=`img/${img}` alt='')
-					.col-12.col-sm-7.col-md
+					.col-7.col-md
 						+e.flex-wrap--params
 							if l
 								+e.labels

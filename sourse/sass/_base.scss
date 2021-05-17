@@ -133,6 +133,14 @@
 	flex: 0 0 100%;
 	max-width: 100%;
 }
+.col-5 {
+	flex: 0 0 auto;
+	width: (5 / 12 * 100%);;
+}
+.col-7 {
+	flex: 0 0 auto;
+	width: (7 / 12 * 100%);
+}
 
 .col {
 	-webkit-box-flex: 1;
