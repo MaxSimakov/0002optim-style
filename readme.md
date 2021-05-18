@@ -2,6 +2,7 @@
 2. <https://maxsimakov.github.io/0002optim-style/public/home.html>
 3. <https://maxsimakov.github.io/0002optim-style/public/allCatalog.html>
 4. <https://maxsimakov.github.io/0002optim-style/public/catalogItemPage.html>
+4. <https://maxsimakov.github.io/0002optim-style/public/catalogItemPage2.html>
 5. <https://maxsimakov.github.io/0002optim-style/public/category.html>
 6. <https://maxsimakov.github.io/0002optim-style/public/contacts.html>
 7. <https://maxsimakov.github.io/0002optim-style/public/contentPage.html>
