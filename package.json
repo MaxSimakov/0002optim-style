@@ -60,6 +60,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "inputmask": "^5.0.5",
     "jquery": "^3.5.1",
+    "jquery-match-height": "^0.7.2",
     "loading-attribute-polyfill": "^1.5.4",
     "swiper": "^6.6.1"
   }

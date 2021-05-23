@@ -1,0 +1,196 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/homeMenuSlider/_homeMenuSlider.pug
+//- include ../blocks/advantages/_advantages.pug
+include ../blocks/CatalogCategory/_CatalogCategory.pug
+include ../blocks/sliderProductItem/_sliderProductItem.pug
+//- include ../blocks/aboutCompany/_aboutCompany.pug
+//- include ../blocks/sServices/_sServices.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+	-
+		let current= title;
+
+
+block title
+	- let  title= 'Сравнение'
+	title= title
+block pagecontent
+	+header()
+	section.fullWidthSection
+		+breadcrumbsDef(items, current)
+		h1 Сравнение
+		.tabsInfo.mt-0
+			#tabs
+				ul.tabs-nav.mb-0
+					li
+						a.active(href='#') Все характеристики
+					li
+						a(href='#') Только отличия
+					li.close
+						button.closeBtn
+							+icon(`close`)
+							span Очистить всё
+				.tabs-items.mt-30
+					#tab-1.tabs-item
+						.row
+							.sidebar.d-none.d-md-block.col-md-3
+								+b.compareItem
+									+e.card(data-mh="group-0")
+									+e.content
+										+e.table
+											+e.cell.strong(data-mh="group-1") Ткань
+											+e.cell.strong(data-mh="group-2") Материал верха
+											+e.cell.strong(data-mh="group-3") Подкладка/утеплитель
+											+e.cell.strong(data-mh="group-4") Материал подошвы
+											+e.cell.strong(data-mh="group-5") Материал верха
+											+e.cell.strong(data-mh="group-6") Подкладка/утеплитель
+											+e.cell.strong(data-mh="group-7") Материал подошвы
+							.contentWrapper.col-md-9
+								mixin compareSlider(data)
+									+b.compareSlider--js
+										div
+											+compareItem(`product-2.png`, `Костюм мужской для защиты от ОПЗ (У101)`, ``, `6 000 ₽`)
+										div
+											+compareItem(`product-3.png`, `Костюм ИНЖЕНЕР женский`, ``, `1 115 ₽`)
+												+e.table
+													+e.cell(data-mh="group-1")
+														+e.cell-title.strong.d-md-none Ткань
+														| Ст-2 245 г/м, отделка тк. Томбой пл. 245 
+													+e.cell(data-mh="group-2")
+														+e.cell-title.strong.d-md-none Материал верха
+														| Кожа
+													+e.cell(data-mh="group-3")
+														+e.cell-title.strong.d-md-none Подкладка/утеплитель
+														| трикотажный материал
+													+e.cell(data-mh="group-4")
+														+e.cell-title.strong.d-md-none Материал подошвы
+														| &mdash;
+													+e.cell(data-mh="group-5")
+														+e.cell-title.strong.d-md-none Материал верха
+														| Кожа
+													+e.cell(data-mh="group-6")
+														+e.cell-title.strong.d-md-none Подкладка/утеплитель
+														| трикотажный материал
+													+e.cell(data-mh="group-7")
+														+e.cell-title.strong.d-md-none Материал подошвы
+														| &mdash;
+										div
+											+compareItem(`product-4.png`, `Футболка трикотажная (белый)`, ``, `340.5 ₽`)
+												+e.table
+													+e.cell(data-mh="group-1")
+														+e.cell-title.strong.d-md-none Ткань
+														| Ст-2 245 г/м, отделка тк. Томбой пл. 245 
+													+e.cell(data-mh="group-2")
+														+e.cell-title.strong.d-md-none Материал верха
+														| Кожа
+													+e.cell(data-mh="group-3")
+														+e.cell-title.strong.d-md-none Подкладка/утеплитель
+														| трикотажный материал
+													+e.cell(data-mh="group-4")
+														+e.cell-title.strong.d-md-none Материал подошвы
+														| &mdash;
+													+e.cell(data-mh="group-5")
+														+e.cell-title.strong.d-md-none Материал верха
+														| Кожа
+													+e.cell(data-mh="group-6")
+														+e.cell-title.strong.d-md-none Подкладка/утеплитель
+														| трикотажный материал
+													+e.cell(data-mh="group-7")
+														+e.cell-title.strong.d-md-none Материал подошвы
+														| &mdash;
+										div
+											+compareItem(`product-5.png`, `Защитный крем для рук АРМАКОН ПРОТЕКТ, туба 100 мл`, ``, `625 ₽`)
+												+e.table
+													+e.cell(data-mh="group-1")
+														+e.cell-title.strong.d-md-none Ткань
+														| Ст-2 245 г/м, отделка тк. Томбой пл. 245 
+													+e.cell(data-mh="group-2")
+														+e.cell-title.strong.d-md-none Материал верха
+														| Кожа
+													+e.cell(data-mh="group-3")
+														+e.cell-title.strong.d-md-none Подкладка/утеплитель
+														| трикотажный материал
+													+e.cell(data-mh="group-4")
+														+e.cell-title.strong.d-md-none Материал подошвы
+														| ПУ
+													+e.cell(data-mh="group-5")
+														+e.cell-title.strong.d-md-none Материал верха
+														| Кожа
+													+e.cell(data-mh="group-6")
+														+e.cell-title.strong.d-md-none Подкладка/утеплитель
+														| трикотажный материал
+													+e.cell(data-mh="group-7")
+														+e.cell-title.strong.d-md-none Материал подошвы
+														| ПУ
+										//- div
+										//- 	+compareItem(`product.png`, `Костюм рабочий с наколенниками и налакотниками мужской`, `9 990 ₽`, `10 100 ₽`)
+										div
+											+compareItem(`product-2.png`, `Костюм мужской для защиты от ОПЗ (У101)`, ``, `6 000 ₽`)
+										div
+											+compareItem(`product-4.png`, `Футболка трикотажная (белый)`, ``, `340.5 ₽`)
+												+e.table
+													+e.cell(data-mh="group-1")
+														+e.cell-title.strong.d-md-none Ткань
+														| Ст-2 245 г/м, отделка тк. Томбой пл. 245 
+													+e.cell(data-mh="group-2")
+														+e.cell-title.strong.d-md-none Материал верха
+														| Кожа
+													+e.cell(data-mh="group-3")
+														+e.cell-title.strong.d-md-none Подкладка/утеплитель
+														| трикотажный материал
+													+e.cell(data-mh="group-4")
+														+e.cell-title.strong.d-md-none Материал подошвы
+														| &mdash;
+													+e.cell(data-mh="group-5")
+														+e.cell-title.strong.d-md-none Материал верха
+														| Кожа
+													+e.cell(data-mh="group-6")
+														+e.cell-title.strong.d-md-none Подкладка/утеплитель
+														| трикотажный материал
+													+e.cell(data-mh="group-7")
+														+e.cell-title.strong.d-md-none Материал подошвы
+														| &mdash;
+									.compareSliderNav.navButtons
+								+compareSlider()
+
+					//- #tab-2.tabs-item
+					//- 	.row
+					//- 		.sidebar.d-none.d-md-block.col-md-3
+					//- 			+b.compareItem
+					//- 				+e.card
+					//- 				+e.content
+					//- 					+e.table
+					//- 						+e.cell.strong(data-mh="group-1") Ткань
+					//- 						+e.cell.strong(data-mh="group-2") Материал верха
+					//- 						+e.cell.strong(data-mh="group-3") Подкладка/утеплитель
+					//- 						+e.cell.strong(data-mh="group-4") Материал подошвы
+					//- 						+e.cell.strong(data-mh="group-5") Материал верха
+					//- 						+e.cell.strong(data-mh="group-6") Подкладка/утеплитель
+					//- 						+e.cell.strong(data-mh="group-7") Материал подошвы
+					//- 		.contentWrapper.col-md-9
+					//- 			+compareSlider()
+
+	+footer()
+block foot
+	// JS
+	//- script.
+	//- 	$(function () {
+	//- 	var tab = $('#tabs .tabs-items > div');
+	//- 	tab.hide().filter(':first').show();
+	//- 	// Клики по вкладкам.
+	//- 	$('#tabs .tabs-nav a').click(function () {
+	//- 	tab.hide();
+	//- 	tab.filter(this.hash).show().find('.compareSlider--js').slick('refresh');
+	//- 	$('#tabs .tabs-nav a').removeClass('active');
+	//- 	$(this).addClass('active');
+	//- 	return false;
+	//- 	}).filter(':first').click();
+	//- 	});
+
+

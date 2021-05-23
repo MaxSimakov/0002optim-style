@@ -10,3 +10,4 @@
 9. <https://maxsimakov.github.io/0002optim-style/public/searchPage.html>
 10. <https://maxsimakov.github.io/0002optim-style/public/servicesCatalog.html>
 11. <https://maxsimakov.github.io/0002optim-style/public/404.html>
+12. <https://maxsimakov.github.io/0002optim-style/public/compare.html>

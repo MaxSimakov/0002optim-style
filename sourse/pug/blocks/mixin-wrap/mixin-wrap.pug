@@ -46,6 +46,42 @@ mixin productItem(n, h, img, art, text, old, act)
 			.activePrice!= act
 		a.button2(href='') Подробнее
 
+mixin compareItem(img, text, old, act)
+	+b.compareItem
+		+e.card(href="#" data-mh="group-0")
+			button.closeBtn
+				+icon(`close`)
+			+e.img-wrap(href='')
+				img(src=`img/${img}` alt='')
+			+e.prodName!= text
+			+e.activePrice!= act
+		+e.content
+			if block
+				block
+			else
+				+e.table
+					+e.cell(data-mh="group-1")
+						+e.cell-title.strong.d-md-none Ткань
+						| Ст-2 245 г/м, отделка тк. Томбой пл. 245 
+					+e.cell(data-mh="group-2")
+						+e.cell-title.strong.d-md-none Материал верха
+						| Кожа
+					+e.cell(data-mh="group-3")
+						+e.cell-title.strong.d-md-none Подкладка/утеплитель
+						| трикотажный материал
+					+e.cell(data-mh="group-4")
+						+e.cell-title.strong.d-md-none Материал подошвы
+						| ПУ
+					+e.cell(data-mh="group-5")
+						+e.cell-title.strong.d-md-none Материал верха
+						| Кожа
+					+e.cell(data-mh="group-6")
+						+e.cell-title.strong.d-md-none Подкладка/утеплитель
+						| трикотажный материал
+					+e.cell(data-mh="group-7")
+						+e.cell-title.strong.d-md-none Материал подошвы
+						| ПУ
+
 mixin rating
 	.rating
 		i.fa.fa-star.active(aria-hidden='true')
