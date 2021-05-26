@@ -52,6 +52,18 @@
 						</div>
 					</div>
 					<div class="capInfo flexWrap alignRight">
+						<div class="phoneBlock" id="phoneBlock">
+							<button class="phoneBtn" id="phoneBtn">
+								<svg class="icon icon-phone-call ">
+									<use xlink:href="img/svg/sprite.svg#phone-call"></use>
+								</svg>
+							</button>
+							<div class="contactsWrapper">
+								<div class="contacts"><a href="tel:+7(49624)63676">+7 (49644) 2-03-67<span>г. Воскресенск</span></a></div>
+								<div class="contacts"><a href="tel:+7(49624)63676">+7 (49644) 2-03-67<span>г. Воскресенск</span></a></div>
+								<div class="contacts"><a href="tel:+7(49624)63676">+7 (49644) 2-03-67<span>г. Воскресенск</span></a></div>
+							</div>
+						</div>
 						<div class="basketBlk icons active" data-tooltip="Корзина"><a href=""><i class="icon-cart"></i>
 								<div><span>50 товаров</span><span>16 547 ₽</span></div></a></div>
 						<div class="compareBlk icons" data-tooltip="Сравнение"><a href=""><i class="icon-compare"></i><span>60</span></a></div>
@@ -255,7 +267,7 @@
 							<div class="productSpecification"><span>Светоотражающие полосы </span>
 								<p>на плечах, спине, рукавах </p>
 							</div>
-						</div><a class="link tabs-target" href="#tabs" data-id="#tab-2">Смотреть все характеристики</a>
+						</div><a class="link tabs-target-js" href="#tabs" data-id="#tab-2">Смотреть все характеристики</a>
 					</div>
 					<div class="productPriceWrapper">
 						<div class="inStock">
@@ -269,30 +281,30 @@
 						<div class="subTitle">Размеры:</div>
 						<div class="sizeWrapper">
 							<div class="checkboxWrap">
-								<input id="size46" type="checkbox" value="46"/>
+								<input id="size46" type="radio" name="size" value="46"/>
 								<label for="size46">46</label>
 							</div>
 							<div class="checkboxWrap">
-								<input id="size47" type="checkbox" value="47"/>
+								<input id="size47" type="radio" name="size" value="47"/>
 								<label for="size47">47</label>
 							</div>
 							<div class="checkboxWrap">
-								<input id="size46" type="checkbox" disabled="" value="48"/>
+								<input id="size46" type="radio" name="size" disabled="" value="48"/>
 								<label for="size48">48</label>
 							</div>
 							<div class="checkboxWrap">
-								<input id="size88-92" type="checkbox" value="88-92"/>
+								<input id="size88-92" type="radio" name="size" value="88-92"/>
 								<label for="size88-92">88-92</label>
 							</div>
 						</div>
 						<div class="subTitle">Рост:</div>
 						<div class="sizeWrapper">
 							<div class="checkboxWrap">
-								<input id="height170-176" type="checkbox" value="170-176"/>
+								<input id="height170-176" type="radio" name="height" value="170-176"/>
 								<label for="height170-176">170-176</label>
 							</div>
 							<div class="checkboxWrap">
-								<input id="height182-188" type="checkbox" value="182-188"/>
+								<input id="height182-188" type="radio" name="height" value="182-188"/>
 								<label for="height182-188">182-188</label>
 							</div>
 						</div>
@@ -704,7 +716,8 @@
 			slidesToShow: 2
 			}
 			}]
-			});
+			})
+			;
 		</script>
 		<script>
 			$(function () {
@@ -719,8 +732,11 @@
 			return false;
 			}).filter(':first').click();
 			// Клики по якорным ссылкам.
-			$('.tabs-target').click(function () {
-			$('#tabs .tabs-nav a[href=' + $(this).data('id') + ']').click();
+			$('.tabs-target-js').click(function (e) {
+				e.preventDefault();
+			$('#tabs .tabs-nav a[href="#tab-2"]').click();
+				const destination = $('#tabs').offset().top;
+				$('html, body').animate({ scrollTop: destination - 100 }, 1100);
 			});
 			});
 		</script>

@@ -12,10 +12,19 @@
 	@include media-breakpoint-up(md) {
 		padding: 15px 20px 30px 20px;
 	}
-	&:hover, &:active {
+	&:hover,
+	&:active {
 		box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
-    position: relative;
-    z-index: 1;
+		position: relative;
+		z-index: 1;
+		.button2 {
+			background: #e02126;
+			color: #fff !important;
+			border-color: #e02126;
+		}
+		.catalogItem2__prod-name {
+			color: var(--mainColorHover);
+		}
 	}
 	.row {
 		display: flex;
@@ -136,7 +145,7 @@
 			align-items: center;
 			margin-bottom: 0;
 		}
-	
+
 		.favorites {
 			// margin: 0;
 			@include media-breakpoint-down(md) {
@@ -165,7 +174,8 @@
 			// 	font-size: 13px;
 			// }
 		}
-		.compare i, .favorites i {
+		.compare i,
+		.favorites i {
 			@include media-breakpoint-down(md) {
 				margin-right: 0;
 			}

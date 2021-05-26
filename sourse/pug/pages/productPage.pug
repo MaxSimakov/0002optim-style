@@ -94,7 +94,8 @@ block foot
 		slidesToShow: 2
 		}
 		}]
-		});
+		})
+		;
 	script.
 		$(function () {
 		var tab = $('#tabs .tabs-items > div');
@@ -108,7 +109,10 @@ block foot
 		return false;
 		}).filter(':first').click();
 		// Клики по якорным ссылкам.
-		$('.tabs-target').click(function () {
-		$('#tabs .tabs-nav a[href=' + $(this).data('id') + ']').click();
+		$('.tabs-target-js').click(function (e) {
+			e.preventDefault();
+		$('#tabs .tabs-nav a[href="#tab-2"]').click();
+			const destination = $('#tabs').offset().top;
+			$('html, body').animate({ scrollTop: destination - 100 }, 1100);
 		});
 		});

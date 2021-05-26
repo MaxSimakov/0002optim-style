@@ -74,7 +74,7 @@ mixin productPageContent(data)
 				.productSpecification
 					span Светоотражающие полосы 
 					p на плечах, спине, рукавах 
-			a.link.tabs-target(href='#tabs' data-id='#tab-2') Смотреть все характеристики
+			a.link.tabs-target-js(href='#tabs' data-id='#tab-2') Смотреть все характеристики
 		.productPriceWrapper
 			.inStock
 				.yes В наличии
@@ -87,24 +87,24 @@ mixin productPageContent(data)
 			.subTitle Размеры:
 			.sizeWrapper
 				.checkboxWrap
-					input#size46(type='checkbox' value='46')
+					input#size46(type='radio'  name='size' value='46')
 					label(for='size46') 46
 				.checkboxWrap
-					input#size47(type='checkbox' value='47')
+					input#size47(type='radio' name='size' value='47')
 					label(for='size47') 47
 				.checkboxWrap
-					input#size46(type='checkbox' disabled='' value='48')
+					input#size46(type='radio'  name='size' disabled='' value='48')
 					label(for='size48') 48
 				.checkboxWrap
-					input#size88-92(type='checkbox' value='88-92')
+					input#size88-92(type='radio'  name='size' value='88-92')
 					label(for='size88-92') 88-92
 			.subTitle Рост:
 			.sizeWrapper
 				.checkboxWrap
-					input#height170-176(type='checkbox' value='170-176')
+					input#height170-176(type='radio' name='height' value='170-176')
 					label(for='height170-176') 170-176
 				.checkboxWrap
-					input#height182-188(type='checkbox' value='182-188')
+					input#height182-188(type='radio' name='height' value='182-188')
 					label(for='height182-188') 182-188
 			.h30
 			.flexWrap

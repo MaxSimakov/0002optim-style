@@ -64,7 +64,7 @@ block foot
 	script.
 		$(document).ready(function () {
 		$(".fltWrpaTitle").click(function () {
-		$(this).toggleClass("active");
+		$(this).toggleClass("active").parent().siblings().find(".fltWrpaTitle").removeClass('active');
 		return false;
 		});
 		});

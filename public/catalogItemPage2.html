@@ -52,6 +52,18 @@
 						</div>
 					</div>
 					<div class="capInfo flexWrap alignRight">
+						<div class="phoneBlock" id="phoneBlock">
+							<button class="phoneBtn" id="phoneBtn">
+								<svg class="icon icon-phone-call ">
+									<use xlink:href="img/svg/sprite.svg#phone-call"></use>
+								</svg>
+							</button>
+							<div class="contactsWrapper">
+								<div class="contacts"><a href="tel:+7(49624)63676">+7 (49644) 2-03-67<span>г. Воскресенск</span></a></div>
+								<div class="contacts"><a href="tel:+7(49624)63676">+7 (49644) 2-03-67<span>г. Воскресенск</span></a></div>
+								<div class="contacts"><a href="tel:+7(49624)63676">+7 (49644) 2-03-67<span>г. Воскресенск</span></a></div>
+							</div>
+						</div>
 						<div class="basketBlk icons active" data-tooltip="Корзина"><a href=""><i class="icon-cart"></i>
 								<div><span>50 товаров</span><span>16 547 ₽</span></div></a></div>
 						<div class="compareBlk icons" data-tooltip="Сравнение"><a href=""><i class="icon-compare"></i><span>60</span></a></div>
@@ -911,7 +923,7 @@
 		<script>
 			$(document).ready(function () {
 			$(".fltWrpaTitle").click(function () {
-			$(this).toggleClass("active");
+			$(this).toggleClass("active").parent().siblings().find(".fltWrpaTitle").removeClass('active');
 			return false;
 			});
 			});

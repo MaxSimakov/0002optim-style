@@ -119,14 +119,15 @@ mixin sContact()
 											iframe(src='https://yandex.ru/map-widget/v1/-/CCUUJFccTB' width='560' height='400' frameborder='1' allowfullscreen='true' style='position:relative;')
 	#callback.back(style="display: none;")
 		.modalFormWrapper
-			i.icon-cancel(data-fancybox-close='')
 			h3 Обратный звонок
 			form(action='')
-				input(type='text' placeholder='Ваше Имя *' required='')
-				input(type='tel' placeholder='Телефон *' required='')
+				label Имя
+					input(type='text' placeholder='Ваше Имя *' required)
+				label Телефон
+					input(type='tel' placeholder='Телефон *' required)
 				button(type='submit') Отправить заявку
-				p.warning
-					| Отправляя заявку на обратный звонок вы соглашаетесь с 
-					a(href='') политикой конфиденциальности
+			p.warning.center
+				| Отправляя заявку на обратный звонок вы соглашаетесь с 
+				a(href='') политикой конфиденциальности
 
 	// end sContact

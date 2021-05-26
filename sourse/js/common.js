@@ -36,16 +36,41 @@ function eventHandler() {
 		}]
 	});
 
-		
-		$('.compareItem__cell').matchHeight({
-			byRow: false,
-		});
 
-		$('.compareItem__card').matchHeight({
-			byRow: false,
-		});
+	$('.compareItem__cell').matchHeight({
+		byRow: false,
+	});
+
+	$('.compareItem__card').matchHeight({
+		byRow: false,
+	});
+
+	let phoneBtn = document.getElementById('phoneBtn');
+	let phoneBlock = document.getElementById('phoneBlock');
+
+	const toggleMenu = () => {
+		phoneBlock.classList.toggle('active');
+	}
+
+	phoneBtn.addEventListener('click', e => {
+		e.stopPropagation();
+
+		toggleMenu();
+	});
+
+	document.addEventListener('click', e => {
+		let target = e.target;
+		let its_phoneBlock = target == phoneBlock || phoneBlock.contains(target);
+		let its_phoneBtn = target == phoneBtn;
+		let phoneBlock_active = phoneBlock.classList.contains('active');
+
+		if (!its_phoneBlock && !its_phoneBtn && phoneBlock_active) {
+			toggleMenu();
+		}
+	});
 
 };
+
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
@@ -59,3 +84,4 @@ if (document.readyState !== 'loading') {
 // 		document.body.classList.remove('loaded_hiding');
 // 	}, 500);
 // }
+

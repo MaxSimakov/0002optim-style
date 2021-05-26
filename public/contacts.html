@@ -52,6 +52,18 @@
 						</div>
 					</div>
 					<div class="capInfo flexWrap alignRight">
+						<div class="phoneBlock" id="phoneBlock">
+							<button class="phoneBtn" id="phoneBtn">
+								<svg class="icon icon-phone-call ">
+									<use xlink:href="img/svg/sprite.svg#phone-call"></use>
+								</svg>
+							</button>
+							<div class="contactsWrapper">
+								<div class="contacts"><a href="tel:+7(49624)63676">+7 (49644) 2-03-67<span>г. Воскресенск</span></a></div>
+								<div class="contacts"><a href="tel:+7(49624)63676">+7 (49644) 2-03-67<span>г. Воскресенск</span></a></div>
+								<div class="contacts"><a href="tel:+7(49624)63676">+7 (49644) 2-03-67<span>г. Воскресенск</span></a></div>
+							</div>
+						</div>
 						<div class="basketBlk icons active" data-tooltip="Корзина"><a href=""><i class="icon-cart"></i>
 								<div><span>50 товаров</span><span>16 547 ₽</span></div></a></div>
 						<div class="compareBlk icons" data-tooltip="Сравнение"><a href=""><i class="icon-compare"></i><span>60</span></a></div>
@@ -272,14 +284,18 @@
 			</div>
 		</section>
 		<div class="back" id="callback" style="display: none;">
-			<div class="modalFormWrapper"><i class="icon-cancel" data-fancybox-close=""></i>
+			<div class="modalFormWrapper">
 				<h3>Обратный звонок</h3>
 				<form action="">
-					<input type="text" placeholder="Ваше Имя *" required=""/>
-					<input type="tel" placeholder="Телефон *" required=""/>
+					<label>Имя
+						<input type="text" placeholder="Ваше Имя *" required="required"/>
+					</label>
+					<label>Телефон
+						<input type="tel" placeholder="Телефон *" required="required"/>
+					</label>
 					<button type="submit">Отправить заявку</button>
-					<p class="warning">Отправляя заявку на обратный звонок вы соглашаетесь с <a href="">политикой конфиденциальности</a></p>
 				</form>
+				<p class="warning center">Отправляя заявку на обратный звонок вы соглашаетесь с <a href="">политикой конфиденциальности</a></p>
 			</div>
 		</div>
 		<!-- end sContact-->
